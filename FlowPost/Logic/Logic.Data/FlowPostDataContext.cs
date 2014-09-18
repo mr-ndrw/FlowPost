@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using en.AndrewTorski.FlowPost.Logic.Data.Conifgurations;
+using en.AndrewTorski.FlowPost.Logic.Data.Configurations;
 using en.AndrewTorski.FlowPost.Logic.Entities;
 
 namespace en.AndrewTorski.FlowPost.Logic.Data

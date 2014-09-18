@@ -1,7 +1,9 @@
-﻿namespace en.AndrewTorski.FlowPost.Logic.Entities
+﻿using System.Collections.Generic;
+
+namespace en.AndrewTorski.FlowPost.Logic.Entities
 {
     /// <summary>
-    /// Structure which contains Posts and other subCategories in itself.
+    /// Structure which contains Posts and children Categories.
     /// </summary>
     /// <remarks>
     /// No Entity Framework specific annotations were used.
@@ -20,11 +22,20 @@
         /// </summary>
         public string CategoryName { get; set; }
 
+        public Category ParentCategory { get; set; }
         #endregion
 
         #region ForeignProperties
 
+        /// <summary>
+        /// Collection of Categories to which this Category is a parent.
+        /// </summary>
+        public List<Category> Categories { get; set; }
 
+        /// <summary>
+        /// List of posts which were posted to this Category.
+        /// </summary>
+        public List<Post> Posts { get; set; } 
 
         #endregion
     }

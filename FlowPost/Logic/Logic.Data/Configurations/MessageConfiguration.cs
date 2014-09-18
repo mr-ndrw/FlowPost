@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace en.AndrewTorski.FlowPost.Logic.Data.Conifgurations
+namespace en.AndrewTorski.FlowPost.Logic.Data.Configurations
 {
-    class GroupConfiguration
+    class MessageConfiguration
     {
     }
 }

@@ -11,7 +11,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
     /// </summary>
     /// 
     /// <remarks>
-    /// Post 
     /// 
     /// No Entity Framework specific annotations were used.
     /// For configuration purposes please refer to [ClassName]Configuration file in ~/Logic.Data/Configurations
@@ -22,7 +21,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         #region Properties
 
         /// <summary>
-        /// Post's unique identifier also serving as the Key.
+        /// Unique identifier also serving as the Key.
         /// </summary>
         public int Id { get; set; }
 
@@ -30,6 +29,16 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// The content of the Post.
         /// </summary>
         public string Content { get; set; }
+
+        /// <summary>
+        /// Date and time of the message being posted.
+        /// </summary>
+        public DateTime DateTime { get; set; }
+
+        /// <summary>
+        /// Hidden status.
+        /// </summary>
+        public bool IsHidden { get; set; }
 
         /// <summary>
         /// Sticky status.
@@ -42,11 +51,16 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         public bool IsExtraordinary { get; set; }
 
         /// <summary>
+        /// Number of strikes against the Post.
+        /// </summary>
+        public UInt16 Strikes { get; set; }
+
+        /// <summary>
         /// The Post to which this post is a reply.
         /// </summary>
         public Post ParentPost { get; set; }
 
-        #endregion
+        #endregion //Properties
 
         #region ForeignProperties
 
@@ -56,14 +70,20 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         public User User { get; set; }
 
         /// <summary>
+        /// The catergory to which this Post belongs.
+        /// </summary>
+        public Category Category { get; set; }
+
+        /// <summary>
+        /// Reports comitted to this Post.
+        /// </summary>
+        public List<PostReport> PostReports { get; set; } 
+
+        /// <summary>
         /// List of past PostEdits to this Post.
         /// </summary>
         public List<PostEdit> PostEdits { get; set; }
 
-        /// <summary>
-        /// The catergory to which this Post belongs.
-        /// </summary>
-        public Category Category { get; set; }
-        #endregion
+        #endregion //ForeignProperties
     }
 }

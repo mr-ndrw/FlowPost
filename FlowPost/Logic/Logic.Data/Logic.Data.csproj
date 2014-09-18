@@ -49,9 +49,15 @@
     <Compile Include="..\..\_Common\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Conifgurations\CategoryConfiguration.cs" />
-    <Compile Include="Conifgurations\GroupConfiguration.cs" />
-    <Compile Include="Conifgurations\UserConfiguration.cs" />
+    <Compile Include="Configurations\BanConfiguration.cs" />
+    <Compile Include="Configurations\CategoryConfiguration.cs" />
+    <Compile Include="Configurations\GroupConfiguration.cs" />
+    <Compile Include="Configurations\MessageConfiguration.cs" />
+    <Compile Include="Configurations\PostConfiguration.cs" />
+    <Compile Include="Configurations\PostEditConfiguration.cs" />
+    <Compile Include="Configurations\PostReportConfiguration.cs" />
+    <Compile Include="Configurations\UserConfiguration.cs" />
+    <Compile Include="Configurations\UserReportConfiguration.cs" />
     <Compile Include="FlowPostDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

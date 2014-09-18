@@ -42,13 +42,16 @@
     <Compile Include="..\..\_Common\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Ban.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="PostEdit.cs" />
+    <Compile Include="PostReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserReport.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

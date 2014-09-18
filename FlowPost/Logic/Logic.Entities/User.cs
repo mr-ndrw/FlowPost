@@ -25,7 +25,22 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         /// Collection of Groups to which the User belongs.
         /// </summary>
-        public List<Group> Groups { get; set; } 
+        public List<Group> Groups { get; set; }
+
+        /// <summary>
+        /// Collection of banishments issued for this User.
+        /// </summary>
+        public List<Ban> Bans { get; set; }
+
+        /// <summary>
+        /// Collection of Posts created by this User.
+        /// </summary>
+        public List<Post> Posts { get; set; }
+
+        /// <summary>
+        /// Collection of Reports comitted against this User.
+        /// </summary>
+        public List<UserReport> UserReports { get; set; } 
 
         #endregion
 
