@@ -13,7 +13,7 @@
         /// <summary>
         /// Category's unique identifier which serves as the Key.
         /// </summary>
-        public int CategoryId { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Catergory's name.

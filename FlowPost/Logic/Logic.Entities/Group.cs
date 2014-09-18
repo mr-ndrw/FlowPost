@@ -16,12 +16,12 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         /// Group's unique identifier which serves as the Key.
         /// </summary>
-        public int GroupId { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Group's name.
         /// </summary>
-        public string GroupName { get; set; }
+        public string Name { get; set; }
 
         #endregion
 

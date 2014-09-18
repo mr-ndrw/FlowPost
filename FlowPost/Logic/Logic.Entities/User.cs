@@ -16,7 +16,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         /// User's unique name/nick/handle which serves as the Key.
         /// </summary>
-        public string UserName { get; set; }
+        public string Name { get; set; }
 
         #endregion
 
