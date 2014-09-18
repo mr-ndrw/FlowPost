@@ -49,6 +49,7 @@
     <Compile Include="..\..\_Common\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Conifgurations\UserConfiguration.cs" />
     <Compile Include="FlowPostDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

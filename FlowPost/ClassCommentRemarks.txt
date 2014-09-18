@@ -1,0 +1,4 @@
+    /// <remarks>
+    /// No Entity Framework specific annotations were used.
+    /// For configuration purposes please refer to [ClassName]Configuration file in ~/Logic.Data/Configurations
+    /// </remarks>
