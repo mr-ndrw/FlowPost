@@ -20,7 +20,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 
         #endregion
 
-        #region ForeignProperties
+        #region NavigationProperties
 
         /// <summary>
         /// Collection of Groups to which the User belongs.
@@ -40,9 +40,13 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         /// Collection of Reports comitted against this User.
         /// </summary>
-        public List<UserReport> UserReports { get; set; } 
+        public List<UserReport> UserReports { get; set; }
 
-        #endregion
+        /// <summary>
+        /// Collection of Categories moderated by the User.
+        /// </summary>
+        public List<Category> ModeratedCategories { get; set; }
 
+        #endregion //NavigationProperties
     }
 }

@@ -38,12 +38,22 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 
         #endregion //Properties
 
-        #region ForeignProperties
+        #region NavigationProperties
+
+        /// <summary>
+        /// Unique identifier of the Post which Content was edited.
+        /// </summary>
+        public int PostId { get; set; }
 
         /// <summary>
         /// Post of which Content was edited.
         /// </summary>
         public Post Post { get; set; }
+
+        /// <summary>
+        /// Name of the Moderator which has edited this message.
+        /// </summary>
+        public string ModeratorUserName { get; set; }
 
         /// <summary>
         /// Moderator User which has edited this message.

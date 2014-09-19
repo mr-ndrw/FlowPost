@@ -51,6 +51,7 @@
     </Compile>
     <Compile Include="Configurations\BanConfiguration.cs" />
     <Compile Include="Configurations\CategoryConfiguration.cs" />
+    <Compile Include="Configurations\CategoryGroupConfiguration.cs" />
     <Compile Include="Configurations\GroupConfiguration.cs" />
     <Compile Include="Configurations\MessageConfiguration.cs" />
     <Compile Include="Configurations\PostConfiguration.cs" />

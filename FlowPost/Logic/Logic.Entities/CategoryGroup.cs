@@ -1,25 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace en.AndrewTorski.FlowPost.Logic.Entities
 {
     /// <summary>
-    /// Represents a Group of Users.
+    /// Groups multiple Categories into one entity.
     /// </summary>
     /// <remarks>
     /// No Entity Framework specific annotations were used.
     /// For configuration purposes please refer to [ClassName]Configuration file in ~/Logic.Data/Configurations
     /// </remarks>
-    public class Group
+    public class CategoryGroup
     {
         #region Properties
 
         /// <summary>
-        /// Group's unique identifier which serves as the Key.
+        /// Unique identifier which also serves as the Key.
         /// </summary>
-        public int Id { get; set; }
+        public UInt16 Id { get; set; }
 
         /// <summary>
-        /// Group's name.
+        /// Name of the group.
         /// </summary>
         public string Name { get; set; }
 
@@ -28,9 +29,9 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         #region NavigationProperties
 
         /// <summary>
-        /// Collection of Users which belong to this Group
+        /// Collection of Categories which belong to this group.
         /// </summary>
-        public List<User> Users { get; set; }
+        public List<Category> Categories { get; set; } 
 
         #endregion
     }

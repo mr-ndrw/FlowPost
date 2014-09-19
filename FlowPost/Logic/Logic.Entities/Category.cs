@@ -11,6 +11,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
     /// </remarks>
     public class Category
     {
+            
         #region Properties
         /// <summary>
         /// Category's unique identifier which serves as the Key.
@@ -20,23 +21,38 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         /// Catergory's name.
         /// </summary>
-        public string CategoryName { get; set; }
+        public string Name { get; set; }
 
         public Category ParentCategory { get; set; }
         #endregion
 
-        #region ForeignProperties
+        #region NavigationProperties
 
         /// <summary>
-        /// Collection of Categories to which this Category is a parent.
+        /// Unique identifier of the CategoryGroup this Category belongs to.
+        /// </summary>
+        public int CategoryGroupId { get; set; }
+
+        /// <summary>
+        /// CategoryGroup to which this Category belongs to.
+        /// </summary>
+        public CategoryGroup CategoryGroup { get; set; }
+
+        /// <summary>
+        /// Collection of children Categories.
         /// </summary>
         public List<Category> Categories { get; set; }
 
         /// <summary>
         /// List of posts which were posted to this Category.
         /// </summary>
-        public List<Post> Posts { get; set; } 
+        public List<Post> Posts { get; set; }
 
-        #endregion
+        /// <summary>
+        /// Collection of Users which may moderate this Category.
+        /// </summary>
+        public List<User> ModeratingUsers { get; set; }
+
+        #endregion //NavigationProperties
     }
 }

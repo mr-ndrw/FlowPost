@@ -38,17 +38,25 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 
         #endregion
 
-        #region ForeignProperties
+        #region NavigationProperties
+
+        /// <summary>
+        /// Name of the Sender of the message.
+        /// </summary>
+        public string SenderUserName { get; set; }
 
         /// <summary>
         /// Sender of the message.
         /// </summary>
-        public User Sender { get; set; }
+        public User SenderUser { get; set; }
+
+
+        public string AdresseUserName { get; set; }
 
         /// <summary>
         /// Addressee of the message.
         /// </summary>
-        public User Addresse { get; set; }
+        public User AddresseUser { get; set; }
 
         #endregion
     }

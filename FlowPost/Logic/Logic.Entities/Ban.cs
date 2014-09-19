@@ -43,7 +43,12 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 
         #endregion //Properties
 
-        #region ForeignProperties
+        #region NavigationProperties
+
+        /// <summary>
+        /// Name of the banished User.
+        /// </summary>
+        public string BanishedUserName { get; set; }
 
         /// <summary>
         /// Banished User.
@@ -51,10 +56,15 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         public User BanishedUser { get; set; }
 
         /// <summary>
-        /// 
+        /// Name of the moderator who has issued the banishment.
+        /// </summary>
+        public string ModeratorUserName { get; set; }
+
+        /// <summary>
+        /// Moderator who has issued the banishment.
         /// </summary>
         public User Moderatoruser { get; set; }
 
-        #endregion //ForeignProperties
+        #endregion //NavigationProperties
     }
 }

@@ -40,12 +40,22 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 
         #endregion //Properties
 
-        #region ForeignProperties
+        #region NavigationProperties
 
         /// <summary>
-        /// Post which is reported.
+        /// Unique identifier of the reported Post.
+        /// </summary>
+        public int PostId { get; set; }
+
+        /// <summary>
+        /// Reported post in question.
         /// </summary>
         public Post Post { get; set; }
+
+        /// <summary>
+        /// Name of the reporting User.
+        /// </summary>
+        public string ReportingUserName { get; set; }
 
         /// <summary>
         /// Reporting User.
@@ -53,9 +63,15 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         public User ReportingUser { get; set; }
 
         /// <summary>
+        /// Name of the moderator which has replied to this message.
+        /// </summary>
+        public string ModeratorUserName { get; set; }
+
+        /// <summary>
         /// Moderator which has replied to this message.
         /// </summary>
         public User ModeratorUser { get; set; }
-        #endregion //ForeignProperties
+
+        #endregion //NavigationProperties
     }
 }

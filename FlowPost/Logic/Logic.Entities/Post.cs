@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace en.AndrewTorski.FlowPost.Logic.Entities
 {
@@ -62,12 +59,22 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 
         #endregion //Properties
 
-        #region ForeignProperties
+        #region NavigationProperties
+
+        /// <summary>
+        /// Name of the User which has posted this message.
+        /// </summary>
+        public string UserName { get; set; }
 
         /// <summary>
         /// User which has posted this message.
         /// </summary>
         public User User { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the catergory to which this Post belongs.
+        /// </summary>       
+        public int CategoryId { get; set; }
 
         /// <summary>
         /// The catergory to which this Post belongs.
@@ -84,6 +91,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// </summary>
         public List<PostEdit> PostEdits { get; set; }
 
-        #endregion //ForeignProperties
+        #endregion //NavigationProperties
     }
 }

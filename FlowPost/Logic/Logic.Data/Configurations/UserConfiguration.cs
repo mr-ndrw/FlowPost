@@ -9,7 +9,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Data.Configurations
     public class UserConfiguration : EntityTypeConfiguration<User>
     {
         /// <summary>
-        /// Configuration options for User entity.
+        /// Configuration options constructor for User entity.
         /// </summary>
         public UserConfiguration()
         {
