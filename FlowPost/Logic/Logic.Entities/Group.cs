@@ -30,7 +30,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         /// Collection of Users which belong to this Group
         /// </summary>
-        public List<User> Users { get; set; }
+        public virtual ICollection<User> Users { get; set; }
 
         #endregion
     }

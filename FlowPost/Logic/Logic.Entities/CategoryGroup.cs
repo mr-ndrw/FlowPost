@@ -31,7 +31,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         /// Collection of Categories which belong to this group.
         /// </summary>
-        public List<Category> Categories { get; set; } 
+        public virtual ICollection<Category> Categories { get; set; } 
 
         #endregion
     }

@@ -41,17 +41,17 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         /// Collection of children Categories.
         /// </summary>
-        public List<Category> Categories { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
 
         /// <summary>
         /// List of posts which were posted to this Category.
         /// </summary>
-        public List<Post> Posts { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
 
         /// <summary>
         /// Collection of Users which may moderate this Category.
         /// </summary>
-        public List<User> ModeratingUsers { get; set; }
+        public virtual ICollection<User> ModeratingUsers { get; set; }
 
         #endregion //NavigationProperties
     }

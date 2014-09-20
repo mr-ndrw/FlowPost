@@ -38,6 +38,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         public bool IsHidden { get; set; }
 
         /// <summary>
+        /// Closed status.
+        /// </summary>
+        public bool IsClosed { get; set; }
+
+        /// <summary>
         /// Sticky status.
         /// </summary>
         public bool IsSticky { get; set; }
@@ -84,12 +89,12 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         /// Reports comitted to this Post.
         /// </summary>
-        public List<PostReport> PostReports { get; set; } 
+        public virtual ICollection<PostReport> PostReports { get; set; }
 
         /// <summary>
-        /// List of past PostEdits to this Post.
+        /// Collection of past PostEdits to this Post.
         /// </summary>
-        public List<PostEdit> PostEdits { get; set; }
+        public virtual ICollection<PostEdit> PostEdits { get; set; }
 
         #endregion //NavigationProperties
     }
