@@ -11,7 +11,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new UserConfiguration());
-            
         }
     }
 }

@@ -57,6 +57,8 @@
     <Compile Include="Configurations\PostConfiguration.cs" />
     <Compile Include="Configurations\PostEditConfiguration.cs" />
     <Compile Include="Configurations\PostReportConfiguration.cs" />
+    <Compile Include="Configurations\ReportConfiguration.cs" />
+    <Compile Include="Configurations\TopicConfiguration.cs" />
     <Compile Include="Configurations\UserConfiguration.cs" />
     <Compile Include="Configurations\UserReportConfiguration.cs" />
     <Compile Include="FlowPostDataContext.cs" />

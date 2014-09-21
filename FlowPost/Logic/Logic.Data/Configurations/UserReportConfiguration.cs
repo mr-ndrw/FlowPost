@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
+using en.AndrewTorski.FlowPost.Logic.Entities;
 
 namespace en.AndrewTorski.FlowPost.Logic.Data.Configurations
 {
-    class UserReportConfiguration
+    public class UserReportConfiguration : EntityTypeConfiguration<UserReport>
     {
     }
 }
