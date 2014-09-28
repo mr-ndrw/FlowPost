@@ -18,6 +18,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        ///     Total number of messages posted by the User.
+        /// </summary>
+        public int NumberOfPosts { get; set; }
+
         #endregion
 
         #region NavigationProperties
@@ -26,6 +31,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         ///     Collection of Groups to which the User belongs.
         /// </summary>
         public virtual ICollection<Group> Groups { get; set; }
+
+        /// <summary>
+        ///     Collection of Groups which this User moderates.
+        /// </summary>
+        public virtual ICollection<Group> ModeratedGroups { get; set; }
 
         /// <summary>
         ///     Collection of banishments issued for this User.
@@ -47,6 +57,15 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// </summary>
         public virtual ICollection<Category> ModeratedCategories { get; set; }
 
+        /// <summary>
+        ///     Collection of Categories which User can view.
+        /// </summary>
+        public virtual ICollection<Category> CanViewCategories { get; set; }
+
+        /// <summary>
+        ///     Collection of Categories which User can view and Edit.
+        /// </summary>
+        public virtual ICollection<Category> CanViewAndEditCategories { get; set; }
         #endregion //NavigationProperties
     }
 }

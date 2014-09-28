@@ -57,6 +57,26 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// </summary>
         public virtual ICollection<User> ModeratingUsers { get; set; }
 
+        /// <summary>
+        ///     Collection of Groups which can view this Category.
+        /// </summary>
+        public virtual ICollection<Group> CanBeViewedByGroups { get; set; }
+
+        /// <summary>
+        ///     Collection of Groups which can view and edit this Category.
+        /// </summary>
+        public virtual ICollection<Group> CanBeViewedAndEditedByGroups { get; set; }
+
+        /// <summary>
+        ///     Collection of Users which can view this Category.
+        /// </summary>
+        public virtual ICollection<User> CanBeViewedByUsers { get; set; }
+
+        /// <summary>
+        ///     Collection of Users which can view and edit this Category.
+        /// </summary>
+        public virtual ICollection<User> CanBeViewAndEditedByUsers { get; set; }
+
         #endregion //NavigationProperties
     }
 }

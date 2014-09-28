@@ -1,80 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Ban" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Ban">
+    <Position X="9.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAACBAAAAgAAAAAAAAAABAAAAAAAAAAABAAABABQAAA=</HashCode>
       <FileName>Ban.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Category" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Category">
+    <Position X="13.25" Y="1.25" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AACCAAAAAAAAAAAAFAAAAAQAAAAAEAAAAgAAAAAgAAA=</HashCode>
       <FileName>Category.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.CategoryGroup" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.CategoryGroup">
+    <Position X="16.5" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAEAAAAAAAAAAAAAA=</HashCode>
       <FileName>CategoryGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Group">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="6.5" Y="2.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAACACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Group.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Message" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Message">
+    <Position X="12.75" Y="6.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAACAAAEggAAAEAgAAAAAAAAAAAAAAQAAAAAAQAAAAA=</HashCode>
       <FileName>Message.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Post" Collapsed="true">
-    <Position X="2.25" Y="1.5" Width="1.5" />
+  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Post">
+    <Position X="3.5" Y="6.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>BAADAAAACgAAAgAAAAAAAABAAACAAEYAAQAAAAAAGgA=</HashCode>
+      <HashCode>AAADAAAAAgAAAgAAAAAAAABAIACAAAYAAQAAAAAACAA=</HashCode>
       <FileName>Post.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.PostEdit" Collapsed="true">
-    <Position X="4" Y="1.5" Width="1.5" />
+  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.PostEdit">
+    <Position X="7.75" Y="7.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AEACAAAAAgAAAAEAAAAAAAAACAAAAAQABAAAAAAAQAA=</HashCode>
       <FileName>PostEdit.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.PostReport">
-    <Position X="4" Y="2.5" Width="1.5" />
+    <Position X="0.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PostReport.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Report">
+    <Position X="1.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAgAAAAAAAAAAAAAAAAAFAAYABAAAgAAAAAA=</HashCode>
+      <FileName>Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Topic">
+    <Position X="0.5" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BgAAAAAAAAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAEgA=</HashCode>
+      <FileName>Topic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.User">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+    <Position X="8.75" Y="4.25" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAEAAEABAAAAAABABAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.UserReport">
-    <Position X="2.25" Y="2.5" Width="1.5" />
+    <Position X="3.75" Y="3.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>UserReport.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="en.AndrewTorski.FlowPost.Logic.Entities.Report">
-    <Position X="5.75" Y="2.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AEACAAAAAgAAAAAAAAAAAAAAAAAFAAYABAAAgAAAAAA=</HashCode>
-      <FileName>Report.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -10,6 +10,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         #region Properties
 
         /// <summary>
+        ///     Title of the Topic.
+        /// </summary>
+        public string Title { get; set; }
+
+        /// <summary>
         ///     Hidden status.
         /// </summary>
         public bool IsHidden { get; set; }
@@ -32,7 +37,13 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
         /// <summary>
         ///     Number of views this Topic has gotten.
         /// </summary>
-        public int Views { get; set; } 
+        public int Views { get; set; }
+
+        /// <summary>
+        ///     Number of posted replies to this Topic.
+        /// </summary>
+        public int NumberOfReplies { get; set; }
+
 
         #endregion
 
