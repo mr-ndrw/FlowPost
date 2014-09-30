@@ -11,6 +11,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
     /// </remarks>
     public class User
     {
+        //comment
         #region Properties
 
         /// <summary>
