@@ -1,8 +1,6 @@
-﻿using System.Data.Entity.ModelConfiguration;
-
-namespace en.AndrewTorski.FlowPost.Logic.Data.Configurations
+﻿namespace en.AndrewTorski.FlowPost.Logic.Data.Configurations
 {
-    public class CategoryConfiguration : EntityTypeConfiguration<Category>
-    {
-    }
+	public class CategoryConfiguration : EntityTypeConfiguration<Category>
+	{
+	}
 }

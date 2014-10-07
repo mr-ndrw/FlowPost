@@ -1,10 +1,8 @@
-﻿using System.Data.Entity.ModelConfiguration;
-using en.AndrewTorski.FlowPost.Logic.Entities;
+﻿using en.AndrewTorski.FlowPost.Logic.Entities;
 
 namespace en.AndrewTorski.FlowPost.Logic.Data.Configurations
 {
-    public class PostEditConfiguration : EntityTypeConfiguration<PostEdit>
-    {
-
-    }
+	public class PostEditConfiguration : EntityTypeConfiguration<PostEdit>
+	{
+	}
 }
