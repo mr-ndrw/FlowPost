@@ -2,6 +2,9 @@
 
 namespace en.AndrewTorski.FlowPost.Logic.Entities
 {
+
+	//TODO: Inherit from Identity User.
+
 	/// <summary>
 	///     Represents a User of the FlowPost forum.
 	/// </summary>

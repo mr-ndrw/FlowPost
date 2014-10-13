@@ -20,6 +20,8 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
+			//TODO: Add entity configurations to modelBuilder.
+			//TODO: Add ACTUAL configuration logic to Persistance.Data.Configurations.
 			modelBuilder.Configurations.Add(new UserConfiguration());
 		}
 	}
