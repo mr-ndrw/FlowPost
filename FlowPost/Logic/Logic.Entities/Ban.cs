@@ -6,10 +6,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 	///     Provides information on a Banishment of a User such as the User himself,
 	///     from when until when he is banned, for what reason is he banished and the Moderating User who has issued the Ban.
 	/// </summary>
-	/// <remarks>
-	///     No Entity Framework specific annotations were used.
-	///     For configuration purposes please refer to [ClassName]Configuration file in ~/Logic.Data/Configurations
-	/// </remarks>
 	public class Ban
 	{
 		#region Properties
@@ -22,7 +18,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Moderator-issued reason for the banishment.
 		/// </summary>
-		public string Content { get; set; }
+		public string Reason { get; set; }
 
 		/// <summary>
 		///     Date and time of the banishment.
@@ -39,7 +35,12 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#region NavigationProperties
 
 		/// <summary>
-		///     Name of the banished User.
+		///     Id of the banished user.
+		/// </summary>
+		public string BanishedUserId { get; set; }
+		
+		/// <summary>
+		///		Name of the banished User.
 		/// </summary>
 		public string BanishedUserName { get; set; }
 
@@ -51,7 +52,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Name of the moderator who has issued the banishment.
 		/// </summary>
-		public string ModeratorUserName { get; set; }
+		public string ModeratorUserId { get; set; }
 
 		/// <summary>
 		///     Moderator who has issued the banishment.

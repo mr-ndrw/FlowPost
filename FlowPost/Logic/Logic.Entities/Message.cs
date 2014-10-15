@@ -41,22 +41,34 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#region NavigationProperties
 
 		/// <summary>
-		///     Name of the Sender of the message.
+		///		Sender's User Id.
 		/// </summary>
-		public string SenderUserName { get; set; }
+		public string FromUserId { get; set; }
+
+		/// <summary>
+		///     Sender's name.
+		/// </summary>
+		public string FromUserName { get; set; }
 
 		/// <summary>
 		///     Sender of the message.
 		/// </summary>
-		public User SenderUser { get; set; }
+		public User FromUser { get; set; }
 
+		/// <summary>
+		///		Addresse's User Id.
+		/// </summary>
+		public string ToUserId { get; set; }
 
-		public string AdresseUserName { get; set; }
+		/// <summary>
+		///		Addessee's User name.
+		/// </summary>
+		public string ToUserName { get; set; }
 
 		/// <summary>
 		///     Addressee of the message.
 		/// </summary>
-		public User AddresseUser { get; set; }
+		public User ToUser { get; set; }
 
 		#endregion
 	}

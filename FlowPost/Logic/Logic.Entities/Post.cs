@@ -20,9 +20,14 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public int Id { get; set; }
 
 		/// <summary>
-		///     The content of the Post.
+		///     BBCode encoded content.
 		/// </summary>
-		public string Content { get; set; }
+		public string BbCodeContent { get; set; }
+
+		/// <summary>
+		///		Marked-up content.
+		/// </summary>
+		public string HtmlContent { get; set; }
 
 		/// <summary>
 		///     Date and time of the message being posted.
@@ -42,6 +47,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#endregion //Properties
 
 		#region NavigationProperties
+
+		/// <summary>
+		///     Id of the User which has posted this message.
+		/// </summary>
+		public string UserId { get; set; }
 
 		/// <summary>
 		///     Name of the User which has posted this message.

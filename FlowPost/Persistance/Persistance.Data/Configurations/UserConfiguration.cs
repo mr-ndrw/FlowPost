@@ -13,7 +13,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 		/// </summary>
 		public UserConfiguration()
 		{
-			HasKey(u => u.Name);
+
 		}
 	}
 }

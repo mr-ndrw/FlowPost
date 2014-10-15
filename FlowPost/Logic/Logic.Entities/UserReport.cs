@@ -10,7 +10,7 @@
 		/// <summary>
 		///     Unique identifier of the reported User.
 		/// </summary>
-		public string UserName { get; set; }
+		public string UserId { get; set; }
 
 		/// <summary>
 		///     Reported user in question.

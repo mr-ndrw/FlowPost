@@ -1,25 +1,28 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace en.AndrewTorski.FlowPost.Logic.Entities
 {
-
-	//TODO: Inherit from Identity User.
-
 	/// <summary>
 	///     Represents a User of the FlowPost forum.
 	/// </summary>
 	/// <remarks>
 	///     No Entity Framework specific annotations were used.
-	///     For configuration purposes please refer to [ClassName]Configuration file in ~/Configurations/Logic.Data
 	/// </remarks>
-	public class User
+	public class User : IdentityUser<int, Login, UserRole, Claim>
 	{
 		#region Properties
 
 		/// <summary>
-		///     User's unique name/nick/handle which serves as the Key.
+		///		User's Date of birth.
+		/// </summary>s
+		public DateTime DateOfBirth { get; set; }
+
+		/// <summary>
+		///		User's country.
 		/// </summary>
-		public string Name { get; set; }
+		public string Country { get; set; }
 
 		/// <summary>
 		///     Total number of messages posted by the User.

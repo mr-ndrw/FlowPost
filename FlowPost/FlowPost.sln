@@ -5,6 +5,7 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Common", "_Common", "{4DD1C0AA-5FE6-4153-B619-8721EF1BBA3F}"
 	ProjectSection(SolutionItems) = preProject
+		AllCountries.xml = AllCountries.xml
 		ClassCommentRemarks.txt = ClassCommentRemarks.txt
 		_Common\SharedAssemblyInfo.cs = _Common\SharedAssemblyInfo.cs
 	EndProjectSection

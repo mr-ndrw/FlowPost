@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace en.AndrewTorski.FlowPost.Logic.Entities
 {
@@ -37,12 +38,27 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Number of views this Topic has gotten.
 		/// </summary>
-		public int Views { get; set; }
+		public int NumberOfViews { get; set; }
 
 		/// <summary>
 		///     Number of posted replies to this Topic.
 		/// </summary>
 		public int NumberOfReplies { get; set; }
+
+		/// <summary>
+		///		Datetime of the last message posted to this Topic.
+		/// </summary>
+		public DateTime TimeOfLastPost { get; set; }
+
+		/// <summary>
+		///		Name of the last User who has posted a message to this topic.
+		/// </summary>
+		public string LastPosterUserName { get; set; }
+
+		/// <summary>
+		///		Id of the last posted message.
+		/// </summary>
+		public int LastPostId { get; set; }
 
 		#endregion
 
