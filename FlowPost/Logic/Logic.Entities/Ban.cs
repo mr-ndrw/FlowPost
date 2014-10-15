@@ -52,17 +52,17 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Id of the moderator who has issued the banishment.
 		/// </summary>
-		public string ModeratorUserId { get; set; }
+		public string IssuingModeratorUserId { get; set; }
 
 		/// <summary>
 		///     Name of the moderator who has issued the banishment.
 		/// </summary>
-		public string ModeratorUserName { get; set; }
+		public string IssuingModeratorUserName { get; set; }
 
 		/// <summary>
 		///     Moderator who has issued the banishment.
 		/// </summary>
-		public User Moderatoruser { get; set; }
+		public User IssuingModerator { get; set; }
 
 		#endregion //NavigationProperties
 	}
