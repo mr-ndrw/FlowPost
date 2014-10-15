@@ -14,13 +14,18 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 	{
 		#region Properties
 
+		/*
+		 * Imporatant note:
+		 * Inherited class IndentityUser, already contains such properties as UserName, Email, UserId and Password.
+		 */
+
 		/// <summary>
-		///		User's Date of birth.
-		/// </summary>s
+		///     User's Date of birth.
+		/// </summary>
 		public DateTime DateOfBirth { get; set; }
 
 		/// <summary>
-		///		User's country.
+		///     User's country.
 		/// </summary>
 		public string Country { get; set; }
 
