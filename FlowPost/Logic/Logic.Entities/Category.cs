@@ -3,24 +3,14 @@
 namespace en.AndrewTorski.FlowPost.Logic.Entities
 {
 	/// <summary>
-	///     Structure which contains Posts, Topics and children Categories.
+	///     Structure which contains Posts and children Categories.
 	/// </summary>
+	/// <remarks>
+	///     No Entity Framework specific annotations were used.
+	///     For configuration purposes please refer to [ClassName]Configuration file in ~/Logic.Data/Configurations
+	/// </remarks>
 	public class Category
 	{
-		public Category()
-		{
-			CanBeViewAndEditedByUsers = new List<User>();
-			CanBeViewedByUsers = new List<User>();
-
-			CanBeViewedAndEditedByGroups = new List<Group>();
-			CanBeViewedByGroups = new List<Group>();
-
-			Categories = new List<Category>();
-			Posts = new List<Post>();
-			Topics = new List<Topic>();
-			ModeratingUsers = new List<User>();
-		}
-
 		#region Properties
 
 		/// <summary>
@@ -33,7 +23,12 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// </summary>
 		public string Name { get; set; }
 
-		#endregion //Properties
+		/// <summary>
+		///     Parent category of this Category. If null, then Category is a root Category.
+		/// </summary>
+		public Category ParentCategory { get; set; }
+
+		#endregion
 
 		#region NavigationProperties
 
@@ -50,42 +45,37 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Collection of children Categories.
 		/// </summary>
-		public ICollection<Category> Categories { get; set; }
-
-		/// <summary>
-		///     Collection of Topics posted to this category.
-		/// </summary>
-		public ICollection<Topic> Topics { get; set; }
+		public virtual ICollection<Category> Categories { get; set; }
 
 		/// <summary>
 		///     List of posts which were posted to this Category.
 		/// </summary>
-		public ICollection<Post> Posts { get; set; }
+		public virtual ICollection<Post> Posts { get; set; }
 
 		/// <summary>
 		///     Collection of Users which may moderate this Category.
 		/// </summary>
-		public ICollection<User> ModeratingUsers { get; set; }
+		public virtual ICollection<User> ModeratingUsers { get; set; }
 
 		/// <summary>
 		///     Collection of Groups which can view this Category.
 		/// </summary>
-		public ICollection<Group> CanBeViewedByGroups { get; set; }
+		public virtual ICollection<Group> CanBeViewedByGroups { get; set; }
 
 		/// <summary>
 		///     Collection of Groups which can view and edit this Category.
 		/// </summary>
-		public ICollection<Group> CanBeViewedAndEditedByGroups { get; set; }
+		public virtual ICollection<Group> CanBeViewedAndEditedByGroups { get; set; }
 
 		/// <summary>
 		///     Collection of Users which can view this Category.
 		/// </summary>
-		public ICollection<User> CanBeViewedByUsers { get; set; }
+		public virtual ICollection<User> CanBeViewedByUsers { get; set; }
 
 		/// <summary>
 		///     Collection of Users which can view and edit this Category.
 		/// </summary>
-		public ICollection<User> CanBeViewAndEditedByUsers { get; set; }
+		public virtual ICollection<User> CanBeViewAndEditedByUsers { get; set; }
 
 		#endregion //NavigationProperties
 	}
