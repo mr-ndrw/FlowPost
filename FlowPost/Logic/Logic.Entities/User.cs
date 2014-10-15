@@ -15,7 +15,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#region Properties
 
 		/*
-		 * Imporatant note:
+		 * Imporatant notice:
 		 * Inherited class IndentityUser, already contains such properties as UserName, Email, UserId and Password.
 		 */
 
@@ -81,8 +81,16 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// </remarks>
 		public ICollection<Category> EditedCategories { get; set; }
 
-		#endregion //NavigationProperties
+		/// <summary>
+		///		Messages sent by this User.
+		/// </summary>
+		public ICollection<Message> SentMessages { get; set; }
 
-		//comment
+		/// <summary>
+		///		Messages received by this User.
+		/// </summary>
+		public ICollection<Message> ReceivedMessages { get; set; }
+
+		#endregion //NavigationProperties
 	}
 }

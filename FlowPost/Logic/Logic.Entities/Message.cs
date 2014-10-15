@@ -21,15 +21,17 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Title of the message.
 		/// </summary>
-		public string Title { get; set; }
+		public string Subject { get; set; }
 
 		/// <summary>
-		///     Message's content.
+		///     BBCode encoded content.
 		/// </summary>
-		/// <remarks>
-		///     May be BBC encoded.
-		/// </remarks>
-		public string Content { get; set; }
+		public string BbCodeContent { get; set; }
+
+		/// <summary>
+		///		Marked-up content.
+		/// </summary>
+		public string HtmlContent { get; set; }
 
 		/// <summary>
 		///     Date and time of the message posting.

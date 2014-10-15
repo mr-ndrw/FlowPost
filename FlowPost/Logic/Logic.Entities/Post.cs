@@ -29,6 +29,8 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// </summary>
 		public string HtmlContent { get; set; }
 
+		//TODO: RawContent - property?
+
 		/// <summary>
 		///     Date and time of the message being posted.
 		/// </summary>

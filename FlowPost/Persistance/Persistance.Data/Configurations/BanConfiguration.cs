@@ -5,5 +5,9 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 {
 	public class BanConfiguration : EntityTypeConfiguration<Ban>
 	{
+		public BanConfiguration()
+		{
+			//TODO: Implement BanConfig.
+		}
 	}
 }

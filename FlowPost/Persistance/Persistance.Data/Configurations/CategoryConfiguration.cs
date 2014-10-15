@@ -38,9 +38,12 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			//----------------------------------------------------
 
 			/*	LastPostDateTime, LastPosterUserName:
-			 *	These do not need a configuration because they do not depend on any table.
+			 *	These do not depend on any property.
 			 *	These exist as purely functional properties and will have to be updated as new Posts are added.
+			 *	They are Required.
 			 */
+			Property(category => category.LastPostDateTime).IsRequired();
+			Property(category => category.LastPosterUserName).IsRequired();
 
 			//----------------------------------------------------
 
@@ -65,7 +68,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			 */
 			HasMany(category => category.ModeratingUsers)
 				.WithMany(user => user.ModeratedCategories)
-				.Map(mtm => mtm.ToTable("ModeratorsCategories"));
+				.Map(manyToMany => manyToMany.ToTable("ModeratorsCategories"));
 
 			//----------------------------------------------------
 
@@ -75,7 +78,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			 */
 			HasMany(category => category.ViewedByUsers)
 				.WithMany(user => user.ViewedCategories)
-				.Map(mtm => mtm.ToTable("UsersViewCategories"));
+				.Map(manyToMany => manyToMany.ToTable("UsersViewCategories"));
 
 			//----------------------------------------------------
 
@@ -85,7 +88,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			 */
 			HasMany(category => category.EditedByUsers)
 				.WithMany(user => user.EditedCategories)
-				.Map(mtm => mtm.ToTable("UsersEditCategories"));
+				.Map(manyToMany => manyToMany.ToTable("UsersEditCategories"));
 
 			//----------------------------------------------------
 
@@ -95,7 +98,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			 */
 			HasMany(category => category.ViewedByGroups).
 				WithMany(group => group.ViewedCategories)
-				.Map(mtm => mtm.ToTable("GroupsViewCategories"));
+				.Map(manyToMany => manyToMany.ToTable("GroupsViewCategories"));
 
 			//----------------------------------------------------
 
@@ -105,7 +108,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			 */
 			HasMany(category => category.EditedByGroups)
 				.WithMany(group => group.EditedCategories)
-				.Map(mtm => mtm.ToTable("GroupsEditCategories"));
+				.Map(manyToMany => manyToMany.ToTable("GroupsEditCategories"));
 
 			//----------------------------------------------------
 

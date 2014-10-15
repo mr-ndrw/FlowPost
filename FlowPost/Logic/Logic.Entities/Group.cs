@@ -7,6 +7,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 	/// </summary>
 	public class Group
 	{
+		/*	Group:
+		 *		Such an entity groups toghether a number of Users, who collectively take on a name and give themselves a description.
+		 *		They may have a special access to some parts of the forums. Each group is moderated by specifically designated Users who may add,
+		 *		delete Users, change the name and description of the group.
+		 */
 		#region Properties
 
 		/// <summary>
@@ -18,6 +23,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		///     Group's name.
 		/// </summary>
 		public string Name { get; set; }
+
+		/// <summary>
+		///		Description of the Group.
+		/// </summary>
+		public string Description { get; set; }
 
 		#endregion
 

@@ -13,6 +13,17 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 		/// </summary>
 		public UserConfiguration()
 		{
+			/*	ViewedCategories, EditedCategories:
+			 *	Configuration options between User and Category Entity are included in CategoryConfiguration class.
+			 */
+
+			//----------------------------------------------------
+
+			/*	ModeratedCategories:
+			 *	Configuration options between User and Category entity are included in CategoryConfiguration class.
+			 */
+
+			//----------------------------------------------------
 
 		}
 	}

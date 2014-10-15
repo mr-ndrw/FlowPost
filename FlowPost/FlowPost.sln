@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Common", "_Common", "{4DD1
 	ProjectSection(SolutionItems) = preProject
 		AllCountries.xml = AllCountries.xml
 		ClassCommentRemarks.txt = ClassCommentRemarks.txt
+		_Common\Entities Map.dgml = _Common\Entities Map.dgml
 		_Common\SharedAssemblyInfo.cs = _Common\SharedAssemblyInfo.cs
 	EndProjectSection
 EndProject
