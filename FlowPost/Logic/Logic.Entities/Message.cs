@@ -34,6 +34,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public string HtmlContent { get; set; }
 
 		/// <summary>
+		///		Raw text with no markup.
+		/// </summary>
+		public string RawContent { get; set; }
+
+		/// <summary>
 		///     Date and time of the message posting.
 		/// </summary>
 		public DateTime DateTime { get; set; }

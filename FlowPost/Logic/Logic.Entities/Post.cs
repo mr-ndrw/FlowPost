@@ -25,9 +25,14 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public string BbCodeContent { get; set; }
 
 		/// <summary>
-		///		Marked-up content.
+		///		HyperText-Marked-up content.
 		/// </summary>
 		public string HtmlContent { get; set; }
+
+		/// <summary>
+		///		Raw text with no markup.
+		/// </summary>
+		public string RawContent { get; set; }
 
 		//TODO: RawContent - property?
 

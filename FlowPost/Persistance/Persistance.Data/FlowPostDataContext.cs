@@ -23,6 +23,11 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 			//TODO: Add entity configurations to modelBuilder.
 			//TODO: Add ACTUAL configuration logic to Persistance.Data.Configurations.
 			modelBuilder.Configurations.Add(new UserConfiguration());
+			modelBuilder.Configurations.Add(new GroupConfiguration());
+			modelBuilder.Configurations.Add(new CategoryGroupConfiguration());
+			modelBuilder.Configurations.Add(new CategoryConfiguration());
+			modelBuilder.Configurations.Add(new BanConfiguration());
+			modelBuilder.Configurations.Add(new MessageConfiguration());
 		}
 	}
 }

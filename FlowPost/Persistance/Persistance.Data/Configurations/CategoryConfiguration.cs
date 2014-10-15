@@ -11,8 +11,8 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 	{
 		public CategoryConfiguration()
 		{
-			 /*	Id:
-			  * Since Category entity alread contains Property called 'Id', we do not explicitly configure EF to use that Property as the Key.
+			/*	Id:
+			 *	Since Category entity alread contains Property called 'Id', we do not explicitly configure EF to use that Property as the Key.
 			 *	By convention Any Property Containing 'Id' will be used as Primary Key by EF. 
 			 */
 
