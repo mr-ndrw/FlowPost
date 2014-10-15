@@ -31,12 +31,15 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Collection of Categories which can be viewed by the members of the Group.
 		/// </summary>
-		public ICollection<Category> CanViewCategories { get; set; }
+		public ICollection<Category> ViewedCategories { get; set; }
 
 		/// <summary>
 		///     Collection of Categories which can be viewed and edited by the members of the Group.
 		/// </summary>
-		public ICollection<Category> CanViewAndEditCategories { get; set; }
+		/// <remarks>
+		///		It is implied that if a Group can edit(post, remove own posts etc), they most certainly can view the Category.
+		/// </remarks>
+		public ICollection<Category> EditedCategories { get; set; }
 
 		/// <summary>
 		///     Collection of Users which manage the group.

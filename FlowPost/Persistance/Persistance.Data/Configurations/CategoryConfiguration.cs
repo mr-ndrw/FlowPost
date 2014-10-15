@@ -1,9 +1,114 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
 using en.AndrewTorski.FlowPost.Logic.Entities;
 
 namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 {
+	/// <summary>
+	///		Configuration class for Category entity defining relationships between entities, column types and entity behaviours.
+	/// </summary>
 	public class CategoryConfiguration : EntityTypeConfiguration<Category>
 	{
+		public CategoryConfiguration()
+		{
+			 /*	Id:
+			  * Since Category entity alread contains Property called 'Id', we do not explicitly configure EF to use that Property as the Key.
+			 *	By convention Any Property Containing 'Id' will be used as Primary Key by EF. 
+			 */
+
+			//----------------------------------------------------
+
+			//	Name:
+			Property(category => category.Name).IsRequired().HasMaxLength(50);
+
+			//----------------------------------------------------
+
+			/*	CategoryGroup:
+			 *	By convention EF will associate Category and CategoryGroup with one-to-many relationship, because in both Entities contain properties
+			 *	which map it as such. That is: Category contains a reference to CategoryGroup, while CategoryGroup contains a collection of Categories.
+			 */
+
+			//----------------------------------------------------
+
+			/*	Topic:
+			 *	By convention EF will associate Category and Topics with one-to-many relationship, because in both Entities contain properties
+			 *	which map it as such. That is: Topic contains a reference to Category, while Category contains a collection of Topics.
+			 */
+
+			//----------------------------------------------------
+
+			/*	LastPostDateTime, LastPosterUserName:
+			 *	These do not need a configuration because they do not depend on any table.
+			 *	These exist as purely functional properties and will have to be updated as new Posts are added.
+			 */
+
+			//----------------------------------------------------
+
+			/*	LastPoster
+			 */
+			//TODO: Check if below is correct?
+			HasOptional(category => category.LastPoster).WithMany(user => new List<Category>()).HasForeignKey(category => category.LastPosterUserId);
+
+			//----------------------------------------------------
+
+			/*	LastPost
+			 */
+			//TODO: Check if below is correct?
+			//TODO: Map ForeignKey to Post?
+			HasOptional(category => category.LastPost).WithOptionalPrincipal(post => new Category());
+
+			//----------------------------------------------------
+
+			/*	Moderating Users:
+			 *	Many-to-many.
+			 *	Specified table name: ModeratorsCategories.
+			 */
+			HasMany(category => category.ModeratingUsers)
+				.WithMany(user => user.ModeratedCategories)
+				.Map(mtm => mtm.ToTable("ModeratorsCategories"));
+
+			//----------------------------------------------------
+
+			/*	ViewedByUsers:
+			 *	Many-to-many.
+			 *	Specified table name: UsersViewCategories
+			 */
+			HasMany(category => category.ViewedByUsers)
+				.WithMany(user => user.ViewedCategories)
+				.Map(mtm => mtm.ToTable("UsersViewCategories"));
+
+			//----------------------------------------------------
+
+			/*	EditedByUsers:
+			 *	Many-to-many.
+			 *	Specified table name: UsersEditCategory.
+			 */
+			HasMany(category => category.EditedByUsers)
+				.WithMany(user => user.EditedCategories)
+				.Map(mtm => mtm.ToTable("UsersEditCategories"));
+
+			//----------------------------------------------------
+
+			/*	ViewedByGroups:
+			 *	Many-to-many.
+			 *	Specified table name: GroupsViewCategories
+			 */
+			HasMany(category => category.ViewedByGroups).
+				WithMany(group => group.ViewedCategories)
+				.Map(mtm => mtm.ToTable("GroupsViewCategories"));
+
+			//----------------------------------------------------
+
+			/*	EditedByGroups:
+			 *	Many-to-many.
+			 *	Specified table name: GroupsEditCategories
+			 */
+			HasMany(category => category.EditedByGroups)
+				.WithMany(group => group.EditedCategories)
+				.Map(mtm => mtm.ToTable("GroupsEditCategories"));
+
+			//----------------------------------------------------
+
+		}
 	}
 }

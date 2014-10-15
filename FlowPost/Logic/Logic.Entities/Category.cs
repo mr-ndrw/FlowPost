@@ -43,6 +43,16 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public int LastPostId { get; set; }
 
 		/// <summary>
+		///		Last message posted to this Category.
+		/// </summary>
+		public Post LastPost { get; set; }
+
+		/// <summary>
+		///		Id of the last poster to this Category.
+		/// </summary>
+		public int LastPosterUserId { get; set; }
+
+		/// <summary>
 		///		Username of the last poster to this Category.
 		/// </summary>
 		public int LastPosterUserName{ get; set; }
@@ -70,7 +80,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     List of posts which were posted to this Category.
 		/// </summary>
-		public ICollection<Topic> Posts { get; set; }
+		/// <remarks>
+		///		Instead of holding the entire post collection, we just hold Topic entities
+		///		for quicker acquisition of Topic posted in a Category.
+		/// </remarks>
+		public ICollection<Topic> Topics { get; set; }
 
 		/// <summary>
 		///     Collection of Users which may moderate this Category.
@@ -80,22 +94,28 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Collection of Groups which can view this Category.
 		/// </summary>
-		public ICollection<Group> CanBeViewedByGroups { get; set; }
+		public ICollection<Group> ViewedByGroups { get; set; }
 
 		/// <summary>
 		///     Collection of Groups which can view and edit this Category.
 		/// </summary>
-		public ICollection<Group> CanBeViewedAndEditedByGroups { get; set; }
+		/// <remarks>
+		///		It is implied that if a Group can edit(post, remove own posts etc), they most certainly can view the Category.
+		/// </remarks>
+		public ICollection<Group> EditedByGroups { get; set; }
 
 		/// <summary>
 		///     Collection of Users which can view this Category.
 		/// </summary>
-		public ICollection<User> CanBeViewedByUsers { get; set; }
+		public ICollection<User> ViewedByUsers { get; set; }
 
 		/// <summary>
 		///     Collection of Users which can view and edit this Category.
 		/// </summary>
-		public ICollection<User> CanBeViewAndEditedByUsers { get; set; }
+		/// <remarks>
+		///		It is implied that if a User can edit(post, remove own posts etc), he/she most certainly can view the Category.
+		/// </remarks>
+		public ICollection<User> EditedByUsers { get; set; }
 
 		#endregion //NavigationProperties
 	}

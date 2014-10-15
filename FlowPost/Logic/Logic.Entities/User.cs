@@ -41,42 +41,45 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Collection of Groups to which the User belongs.
 		/// </summary>
-		public virtual ICollection<Group> Groups { get; set; }
+		public ICollection<Group> Groups { get; set; }
 
 		/// <summary>
 		///     Collection of Groups which this User moderates.
 		/// </summary>
-		public virtual ICollection<Group> ModeratedGroups { get; set; }
+		public ICollection<Group> ModeratedGroups { get; set; }
 
 		/// <summary>
 		///     Collection of banishments issued for this User.
 		/// </summary>
-		public virtual ICollection<Ban> Bans { get; set; }
+		public ICollection<Ban> Bans { get; set; }
 
 		/// <summary>
 		///     Collection of Posts created by this User.
 		/// </summary>
-		public virtual ICollection<Post> Posts { get; set; }
+		public ICollection<Post> Posts { get; set; }
 
 		/// <summary>
 		///     Collection of Reports comitted against this User.
 		/// </summary>
-		public virtual ICollection<UserReport> UserReports { get; set; }
+		public ICollection<UserReport> UserReports { get; set; }
 
 		/// <summary>
 		///     Collection of Categories moderated by the User.
 		/// </summary>
-		public virtual ICollection<Category> ModeratedCategories { get; set; }
+		public ICollection<Category> ModeratedCategories { get; set; }
 
 		/// <summary>
 		///     Collection of Categories which User can view.
 		/// </summary>
-		public virtual ICollection<Category> CanViewCategories { get; set; }
+		public ICollection<Category> ViewedCategories { get; set; }
 
 		/// <summary>
 		///     Collection of Categories which User can view and Edit.
 		/// </summary>
-		public virtual ICollection<Category> CanViewAndEditCategories { get; set; }
+		/// <remarks>
+		///		It is implied that if a User can edit(post, remove own posts etc), he/she most certainly can view the Category.
+		/// </remarks>
+		public ICollection<Category> EditedCategories { get; set; }
 
 		#endregion //NavigationProperties
 
