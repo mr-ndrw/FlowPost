@@ -28,6 +28,8 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 			modelBuilder.Configurations.Add(new CategoryConfiguration());
 			modelBuilder.Configurations.Add(new BanConfiguration());
 			modelBuilder.Configurations.Add(new MessageConfiguration());
+			modelBuilder.Configurations.Add(new PostConfiguration());
+			modelBuilder.Configurations.Add(new TopicConfiguration());
 		}
 	}
 }

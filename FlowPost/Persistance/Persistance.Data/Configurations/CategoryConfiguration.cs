@@ -30,10 +30,11 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 
 			//----------------------------------------------------
 
-			/*	Topic:
-			 *	By convention EF will associate Category and Topics with one-to-many relationship, because in both Entities contain properties
-			 *	which map it as such. That is: Topic contains a reference to Category, while Category contains a collection of Topics.
-			 */
+			//	Topics:
+
+			HasMany(category => category.Topics)
+				.WithRequired(topic => topic.Category)
+				.HasForeignKey(topic => topic.CategoryId);
 
 			//----------------------------------------------------
 
@@ -42,15 +43,20 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			 *	These exist as purely functional properties and will have to be updated as new Posts are added.
 			 *	They are Required.
 			 */
-			Property(category => category.LastPostDateTime).IsRequired();
-			Property(category => category.LastPosterUserName).IsRequired();
+			Property(category => category.LastPostDateTime)
+				.IsRequired();
+
+			Property(category => category.LastPosterUserName)
+				.IsRequired();
 
 			//----------------------------------------------------
 
 			/*	LastPoster
 			 */
 			//TODO: Check if below is correct?
-			HasOptional(category => category.LastPoster).WithMany(user => new List<Category>()).HasForeignKey(category => category.LastPosterUserId);
+			HasOptional(category => category.LastPoster)
+				.WithMany(user => new List<Category>())
+				.HasForeignKey(category => category.LastPosterUserId);
 
 			//----------------------------------------------------
 
@@ -58,7 +64,8 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			 */
 			//TODO: Check if below is correct?
 			//TODO: Map ForeignKey to Post?
-			HasOptional(category => category.LastPost).WithOptionalPrincipal(post => new Category());
+			HasOptional(category => category.LastPost)
+				.WithOptionalPrincipal(post => new Category());
 
 			//----------------------------------------------------
 

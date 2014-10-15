@@ -13,7 +13,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Title of the Topic.
 		/// </summary>
-		public string Title { get; set; }
+		public string Subject { get; set; }
 
 		/// <summary>
 		///     Hidden status.
@@ -50,19 +50,34 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// </summary>
 		public DateTime LastPostDateTime { get; set; }
 
+		#endregion
+
+		#region NavigationProperties
+
+		/// <summary>
+		///		Id of the last User who has posted a message to this topic.
+		/// </summary>
+		public string LastPosterUserId{ get; set; }
+
 		/// <summary>
 		///		Name of the last User who has posted a message to this topic.
 		/// </summary>
 		public string LastPosterUserName { get; set; }
+		
+		/// <summary>
+		///		Last User who has posted under this topic.
+		/// </summary>
+		public User LastPoster { get; set; }
 
 		/// <summary>
 		///		Id of the last posted message.
 		/// </summary>
 		public int LastPostId { get; set; }
 
-		#endregion
-
-		#region NavigationProperties
+		/// <summary>
+		///		Last posted message.
+		/// </summary>
+		public Post LastPost { get; set; }
 
 		/// <summary>
 		///     Unique identifier of the catergory to which this Post belongs.
