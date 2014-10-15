@@ -64,16 +64,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public User User { get; set; }
 
 		/// <summary>
-		///     Unique identifier of the catergory to which this Post belongs.
-		/// </summary>
-		public int CategoryId { get; set; }
-
-		/// <summary>
-		///     The catergory to which this Post belongs.
-		/// </summary>
-		public Category Category { get; set; }
-
-		/// <summary>
 		///     Reports comitted to this Post.
 		/// </summary>
 		public virtual ICollection<PostReport> PostReports { get; set; }

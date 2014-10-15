@@ -48,7 +48,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///		Datetime of the last message posted to this Topic.
 		/// </summary>
-		public DateTime TimeOfLastPost { get; set; }
+		public DateTime LastPostDateTime { get; set; }
 
 		/// <summary>
 		///		Name of the last User who has posted a message to this topic.
@@ -65,9 +65,19 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#region NavigationProperties
 
 		/// <summary>
+		///     Unique identifier of the catergory to which this Post belongs.
+		/// </summary>
+		public int CategoryId { get; set; }
+
+		/// <summary>
+		///     The catergory to which this Post belongs.
+		/// </summary>
+		public Category Category { get; set; }
+
+		/// <summary>
 		///     Collection of posts which are replies to this Topic.
 		/// </summary>
-		public virtual ICollection<Post> Posts { get; set; }
+		public ICollection<Post> Posts { get; set; }
 
 		#endregion
 	}

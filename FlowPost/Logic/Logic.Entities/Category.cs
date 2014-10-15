@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace en.AndrewTorski.FlowPost.Logic.Entities
 {
@@ -28,9 +29,28 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// </summary>
 		public Category ParentCategory { get; set; }
 
+		/// <summary>
+		///		Date and time of the last posted message in this Category.
+		/// </summary>
+		public DateTime LastPostDateTime { get; set; }
 		#endregion
 
 		#region NavigationProperties
+
+		/// <summary>
+		///		Id of the last message posted to this Category.
+		/// </summary>
+		public int LastPostId { get; set; }
+
+		/// <summary>
+		///		Username of the last poster to this Category.
+		/// </summary>
+		public int LastPosterUserName{ get; set; }
+
+		/// <summary>
+		///		User who posted the last message to this Category.
+		/// </summary>
+		public User LastPoster { get; set; }
 
 		/// <summary>
 		///     Unique identifier of the CategoryGroup this Category belongs to.
