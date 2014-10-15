@@ -4,7 +4,7 @@ using en.AndrewTorski.FlowPost.Logic.Entities;
 namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 {	
 	/// <summary>
-	///		Configuration class for Message entity defining relationships between entities, column types and entity behaviours.
+	///		Configuration class for Post entity defining relationships between entities, column types and entity behaviours.
 	/// </summary>
 	public class PostConfiguration : EntityTypeConfiguration<Post>
 	{

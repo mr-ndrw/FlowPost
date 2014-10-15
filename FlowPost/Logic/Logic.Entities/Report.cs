@@ -20,9 +20,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public string Content { get; set; }
 
 		/// <summary>
-		///     Date and time of the report.
+		///     Date and time of the registration of the report.
 		/// </summary>
-		public DateTime DateTime { get; set; }
+		public DateTime SentDateTime { get; set; }
+
+		public DateTime ResolvedDateTime { get; set; }
 
 		/// <summary>
 		///     Has the report been resolved by the moderating officers.

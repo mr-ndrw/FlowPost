@@ -37,6 +37,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#endregion
 
 		#region NavigationProperties
+		
+		/// <summary>
+		///		Collection of Reports sent in by this User.
+		/// </summary>
+		public ICollection<Report> Reports { get; set; } 
 
 		/// <summary>
 		///     Collection of Groups to which the User belongs.

@@ -10,12 +10,12 @@
 		/// <summary>
 		///     Id of the reported User.
 		/// </summary>
-		public string UserId { get; set; }
+		public string ReportedUserId { get; set; }
 
 		/// <summary>
 		///     Name of the reported User.
 		/// </summary>
-		public string UserName { get; set; }
+		public string ReportedUserName { get; set; }
 
 		/// <summary>
 		///     Reported user in question.
