@@ -5,10 +5,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 	/// <summary>
 	///     Represents a Group of Users.
 	/// </summary>
-	/// <remarks>
-	///     No Entity Framework specific annotations were used.
-	///     For configuration purposes please refer to [ClassName]Configuration file in ~/Logic.Data/Configurations
-	/// </remarks>
 	public class Group
 	{
 		#region Properties
@@ -30,22 +26,22 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Collection of Users which belong to this Group
 		/// </summary>
-		public virtual ICollection<User> Users { get; set; }
+		public ICollection<User> Users { get; set; }
 
 		/// <summary>
 		///     Collection of Categories which can be viewed by the members of the Group.
 		/// </summary>
-		public virtual ICollection<Category> CanViewCategories { get; set; }
+		public ICollection<Category> CanViewCategories { get; set; }
 
 		/// <summary>
 		///     Collection of Categories which can be viewed and edited by the members of the Group.
 		/// </summary>
-		public virtual ICollection<Category> CanViewAndEditCategories { get; set; }
+		public ICollection<Category> CanViewAndEditCategories { get; set; }
 
 		/// <summary>
-		///     Collection of Users which can manage the group.
+		///     Collection of Users which manage the group.
 		/// </summary>
-		public virtual ICollection<User> ModeratingUsers { get; set; }
+		public ICollection<User> ModeratingUsers { get; set; }
 
 		#endregion
 	}

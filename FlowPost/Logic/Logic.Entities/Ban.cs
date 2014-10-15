@@ -11,7 +11,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#region Properties
 
 		/// <summary>
-		///     Unique identifier which also serves as the Key.
+		///     Id of the Banishment..
 		/// </summary>
 		public int Id { get; set; }
 
@@ -50,9 +50,14 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public User BanishedUser { get; set; }
 
 		/// <summary>
-		///     Name of the moderator who has issued the banishment.
+		///     Id of the moderator who has issued the banishment.
 		/// </summary>
 		public string ModeratorUserId { get; set; }
+
+		/// <summary>
+		///     Name of the moderator who has issued the banishment.
+		/// </summary>
+		public string ModeratorUserName { get; set; }
 
 		/// <summary>
 		///     Moderator who has issued the banishment.

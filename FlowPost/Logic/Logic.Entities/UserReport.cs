@@ -8,9 +8,14 @@
 		#region NavigationProperties
 
 		/// <summary>
-		///     Unique identifier of the reported User.
+		///     Id of the reported User.
 		/// </summary>
 		public string UserId { get; set; }
+
+		/// <summary>
+		///     Name of the reported User.
+		/// </summary>
+		public string UserName { get; set; }
 
 		/// <summary>
 		///     Reported user in question.

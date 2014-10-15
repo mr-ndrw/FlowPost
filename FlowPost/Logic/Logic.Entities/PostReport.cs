@@ -8,7 +8,7 @@
 		#region NavigationProperties
 
 		/// <summary>
-		///     Unique identifier of the reported Post.
+		///		Id of the reported Post.
 		/// </summary>
 		public int PostId { get; set; }
 
