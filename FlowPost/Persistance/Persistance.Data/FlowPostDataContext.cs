@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using System.Runtime.Remoting.Proxies;
 using en.AndrewTorski.FlowPost.Logic.Entities;
 using en.AndrewTorski.FlowPost.Persistance.Data.Configurations;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -29,6 +28,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
 			#region EntityConfigs
+
 			modelBuilder.Configurations.Add(new UserConfiguration());
 			modelBuilder.Configurations.Add(new GroupConfiguration());
 			modelBuilder.Configurations.Add(new CategoryGroupConfiguration());
@@ -41,6 +41,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 			modelBuilder.Configurations.Add(new ReportConfiguration());
 			modelBuilder.Configurations.Add(new UserReportConfiguration());
 			modelBuilder.Configurations.Add(new PostReportConfiguration()); 
+
 			#endregion
 
 		}
