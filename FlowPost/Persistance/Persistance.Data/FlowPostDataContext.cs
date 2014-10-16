@@ -1,11 +1,19 @@
 ﻿using System.Data.Entity;
+using System.Runtime.Remoting.Proxies;
 using en.AndrewTorski.FlowPost.Logic.Entities;
 using en.AndrewTorski.FlowPost.Persistance.Data.Configurations;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace en.AndrewTorski.FlowPost.Persistance.Data
 {
-	public class FlowPostDataContext : DbContext
+	public class FlowPostDataContext : IdentityDbContext<User, Role, int, Login, UserRole, Claim>
 	{
+		public FlowPostDataContext()
+			:base("name=FlowPost")
+		{
+			
+		}
+
 		public DbSet<User> Users { get; set; }
 		public DbSet<Post> Posts { get; set; }
 		public DbSet<Topic> Topics { get; set; }
