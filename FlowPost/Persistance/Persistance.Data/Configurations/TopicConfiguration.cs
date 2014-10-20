@@ -11,6 +11,13 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 	{
 		public TopicConfiguration()
 		{
+            /*  Inheritance configuration:
+             */
+
+		    ToTable("Topics");
+
+            //----------------------------------------------------
+
 			/*	Id:
 			 *	Since Message entity alread contains Property called 'Id', we do not explicitly configure EF to use that Property as the Key.
 			 *	By convention Any Property Containing 'Id' will be used as Primary Key by EF. 
@@ -46,24 +53,14 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 
 			//----------------------------------------------------
 
-			//	LastPoster, LastPosterId:
+			//	LastPoster:
 
-			HasRequired(topic => topic.LastPoster)
-				.WithMany(user => new List<Topic>())
-				.HasForeignKey(topic => topic.LastPosterUserId);
-
-			//----------------------------------------------------
-
-			//	LastPosterUserName, LastPostDateTime:
-			Property(topic => topic.LastPosterUserName)
-				.IsRequired();
-
-			Property(topic => topic.LastPostDateTime)
-				.IsRequired();
+		    HasRequired(topic => topic.LastPoster)
+		        .WithMany();
 
 			//----------------------------------------------------
 
-			//	NumberOfViews, NumberOfReplies
+			//	NumberOfViews, NumberOfReplies:
 			Property(topic => topic.NumberOfViews)
 				.IsRequired();
 
@@ -71,6 +68,11 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 				.IsRequired();
 
 			//----------------------------------------------------
+
+            //LastPost:
+		    HasOptional(topic => topic.LastPost)
+		        .WithOptionalDependent(post => post.ParentTopic);
+
 		}
 	}
 }

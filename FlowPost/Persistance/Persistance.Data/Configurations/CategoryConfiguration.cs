@@ -32,9 +32,8 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 
 			//	Topics:
 
-			HasMany(category => category.Topics)
-				.WithRequired(topic => topic.Category)
-				.HasForeignKey(topic => topic.CategoryId);
+		    HasMany(category => category.Topics)
+		        .WithRequired(topic => topic.Category);
 
 			//----------------------------------------------------
 
@@ -46,17 +45,13 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			Property(category => category.LastPostDateTime)
 				.IsRequired();
 
-			Property(category => category.LastPosterUserName)
-				.IsRequired();
-
 			//----------------------------------------------------
 
 			/*	LastPoster
 			 */
 			//TODO: Check if below is correct?
-			HasOptional(category => category.LastPoster)
-				.WithMany(user => new List<Category>())
-				.HasForeignKey(category => category.LastPosterUserId);
+		    HasOptional(category => category.LastPoster)
+		        .WithMany();
 
 			//----------------------------------------------------
 
@@ -65,7 +60,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			//TODO: Check if below is correct?
 			//TODO: Map ForeignKey to Post?
 			HasOptional(category => category.LastPost)
-				.WithOptionalPrincipal(post => new Category());
+				.WithOptionalDependent();
 
 			//----------------------------------------------------
 

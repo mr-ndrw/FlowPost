@@ -33,8 +33,8 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 
 			//----------------------------------------------------
 
-			//	DateTime:
-			Property(report => report.DateTime)
+			//	SentDateTime:
+			Property(report => report.SentDateTime)
 				.IsRequired();
 
 			//----------------------------------------------------
@@ -46,28 +46,17 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			//----------------------------------------------------
 
 			//	ReportingUser, ReportingUserId
-			HasRequired(report => report.ReportingUser)
-				.WithMany(user => user.Reports)
-				.HasForeignKey(report => report.ReportingUserId);
+		    HasRequired(report => report.ReportingUser)
+		        .WithMany(user => user.Reports)
+                .WillCascadeOnDelete(false);
 
-			//----------------------------------------------------
-
-			//	ReportingUserName
-			Property(report => report.ReportingUserName)
-				.IsRequired();
 
 			//----------------------------------------------------
 
 			//	ModeratorUser, ModeratorUserId
-			HasRequired(report => report.ModeratorUser)
-				.WithMany(user => new List<Report>())
-				.HasForeignKey(report => report.ModeratorUserId);
-
-			//----------------------------------------------------
-
-			//	ModeratorUserName
-			Property(report => report.ModeratorUserName)
-				.IsRequired();
+		    HasRequired(report => report.ModeratorUser)
+		        .WithMany()
+                .WillCascadeOnDelete(false);
 
 			//----------------------------------------------------
 		}

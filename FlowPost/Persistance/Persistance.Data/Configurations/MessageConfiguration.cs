@@ -27,28 +27,19 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 
 			//----------------------------------------------------
 
-			//	FromUser, FromUserId:
-			HasRequired(message => message.FromUser)
-				.WithMany(user => user.SentMessages)
-				.HasForeignKey(message => message.FromUserId);
+			//	FromUser:
+		    HasRequired(message => message.FromUser)
+		        .WithMany(user => user.SentMessages)
+                .WillCascadeOnDelete(false);
 
 			//----------------------------------------------------
 
 			//	ToUser, ToUserId:
-			HasRequired(message => message.ToUser)
-				.WithMany(user => user.ReceivedMessages)
-				.HasForeignKey(message => message.ToUserId);
+		    HasRequired(message => message.ToUser)
+		        .WithMany(user => user.ReceivedMessages)
+                .WillCascadeOnDelete(false);
 
 			//----------------------------------------------------
-
-			/*	FromUserName, ToUserName:
-			 *	These properties don't depend on anything and are purely functional.
-			 *	During the creation of a Message entity. These will have to be updated.
-			 *	They are however Required.
-			 */
-			Property(message => message.FromUserName).IsRequired();
-			Property(message => message.ToUserName).IsRequired();
-
 		}
 	}
 }

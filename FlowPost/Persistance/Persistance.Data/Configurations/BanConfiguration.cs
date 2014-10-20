@@ -34,32 +34,20 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 
 			//----------------------------------------------------
 
-			//	BanishedUser, BanishedUserId
+			//	BanishedUser:
 
-			HasRequired(ban => ban.BanishedUser)
-				.WithMany(user => user.Bans)
-				.HasForeignKey(ban => ban.BanishedUserId);
-
-			//----------------------------------------------------
-
-			//	BanishedUserName:
-
-			Property(ban => ban.BanishedUserName)
-				.IsRequired();
+		    HasRequired(ban => ban.BanishedUser)
+		        .WithMany(user => user.Bans);
 
 			//----------------------------------------------------
 
-			//	IssuingModeratorUser, IssuingModeratorUserName:
+			//	IssuingModeratorUser:
 
-			HasRequired(ban => ban.IssuingModerator)
-				.WithMany(user => new List<Ban>())
-				.HasForeignKey(ban => ban.IssuingModeratorUserId);
+		    HasRequired(ban => ban.IssuingModerator)
+		        .WithMany()
+                .WillCascadeOnDelete(false);
 
 			//----------------------------------------------------
-
-			//	IssuingModeratorUserName:
-			Property(ban => ban.IssuingModeratorUserName)
-				.IsRequired();
 		}
 	}
 }

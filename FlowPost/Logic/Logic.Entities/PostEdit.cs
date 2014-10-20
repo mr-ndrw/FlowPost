@@ -39,11 +39,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#region NavigationProperties
 
 		/// <summary>
-		///     Unique identifier of the Post which Content was edited.
-		/// </summary>
-		public int PostId { get; set; }
-
-		/// <summary>
 		///     Post of which Content was edited.
 		/// </summary>
 		public Post Post { get; set; }

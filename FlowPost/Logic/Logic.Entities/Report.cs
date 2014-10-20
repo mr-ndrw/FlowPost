@@ -41,29 +41,9 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#region NavigationProperties
 
 		/// <summary>
-		///		Id of the reporting User.
-		/// </summary>
-		public int ReportingUserId { get; set; }
-
-		/// <summary>
-		///     Name of the reporting User.
-		/// </summary>
-		public string ReportingUserName { get; set; }
-
-		/// <summary>
 		///     Reporting User.
 		/// </summary>
 		public User ReportingUser { get; set; }
-
-		/// <summary>
-		///     Id of the moderator which has replied to this message.
-		/// </summary>
-		public int ModeratorUserId { get; set; }
-
-		/// <summary>
-		///     Name of the moderator which has replied to this message.
-		/// </summary>
-		public string ModeratorUserName { get; set; }
 
 		/// <summary>
 		///     Moderator which has replied to this message.

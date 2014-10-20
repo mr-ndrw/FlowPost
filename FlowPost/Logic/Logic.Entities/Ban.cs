@@ -35,29 +35,9 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#region NavigationProperties
 
 		/// <summary>
-		///     Id of the banished user.
-		/// </summary>
-		public string BanishedUserId { get; set; }
-		
-		/// <summary>
-		///		Name of the banished User.
-		/// </summary>
-		public string BanishedUserName { get; set; }
-
-		/// <summary>
 		///     Banished User.
 		/// </summary>
 		public User BanishedUser { get; set; }
-
-		/// <summary>
-		///     Id of the moderator who has issued the banishment.
-		/// </summary>
-		public string IssuingModeratorUserId { get; set; }
-
-		/// <summary>
-		///     Name of the moderator who has issued the banishment.
-		/// </summary>
-		public string IssuingModeratorUserName { get; set; }
 
 		/// <summary>
 		///     Moderator who has issued the banishment.

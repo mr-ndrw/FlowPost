@@ -10,6 +10,12 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 	{
 		public UserReportConfiguration()
 		{
+            /*  Inheritance configuration:
+             */
+
+            ToTable("UserReports");
+
+            //----------------------------------------------------
 			/*	Id:
 			 *	Since UserReport entity alread contains Property called 'Id', we do not explicitly configure EF to use that Property as the Key.
 			 *	By convention Any Property Containing 'Id' will be used as Primary Key by EF. 
@@ -18,15 +24,9 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			//----------------------------------------------------
 
 			//	ReportedUser, ReportedUserId:
-			HasRequired(userReport => userReport.ReportedUser)
-				.WithMany(user => user.UserReports)
-				.HasForeignKey(userReport => userReport.ReportedUserId);
-
-			//----------------------------------------------------
-
-			//	ReportedUserName:
-			Property(userReport => userReport.ReportedUserName)
-				.IsRequired();
+		    HasRequired(userReport => userReport.ReportedUser)
+		        .WithMany(user => user.UserReports)
+                .WillCascadeOnDelete(false);
 
 			//----------------------------------------------------
 		}

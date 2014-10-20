@@ -48,29 +48,9 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#region NavigationProperties
 
 		/// <summary>
-		///		Sender's User Id.
-		/// </summary>
-		public string FromUserId { get; set; }
-
-		/// <summary>
-		///     Sender's name.
-		/// </summary>
-		public string FromUserName { get; set; }
-
-		/// <summary>
 		///     Sender of the message.
 		/// </summary>
 		public User FromUser { get; set; }
-
-		/// <summary>
-		///		Addresse's User Id.
-		/// </summary>
-		public string ToUserId { get; set; }
-
-		/// <summary>
-		///		Addessee's User name.
-		/// </summary>
-		public string ToUserName { get; set; }
 
 		/// <summary>
 		///     Addressee of the message.

@@ -10,6 +10,12 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 	{
 		public PostConfiguration()
 		{
+            /*  Inheritance configuration:
+             */
+
+            ToTable("Posts");
+
+            //----------------------------------------------------
 			/*	Id:
 			 *	Since Message entity alread contains Property called 'Id', we do not explicitly configure EF to use that Property as the Key.
 			 *	By convention Any Property Containing 'Id' will be used as Primary Key by EF. 
@@ -17,16 +23,10 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 
 			//----------------------------------------------------
 
-			//	User, UserId:
-			HasRequired(post => post.User)
-				.WithMany(user => user.Posts)
-				.HasForeignKey(post => post.UserId);
-
-			//----------------------------------------------------
-
-			//	UserName:
-			Property(post => post.UserName)
-				.IsRequired();
+			//	User:
+		    HasRequired(post => post.User)
+		        .WithMany(user => user.Posts)
+                .WillCascadeOnDelete(false);
 
 			//----------------------------------------------------
 
@@ -55,18 +55,16 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
 			//----------------------------------------------------
 
 			//	PostEdits:
-			HasMany(post => post.PostEdits)
-				.WithRequired(edit => edit.Post)
-				.HasForeignKey(edit => edit.PostId);
+		    HasMany(post => post.PostEdits)
+		        .WithRequired(edit => edit.Post);
 
 			//----------------------------------------------------
 
 			//	PostReports:
-			HasMany(post => post.PostReports)
-				.WithRequired(postReport => postReport.Post)
-				.HasForeignKey(postReport => postReport.PostId);
+		    HasMany(post => post.PostReports)
+		        .WithRequired(postReport => postReport.ReportedPost);
 
-			//----------------------------------------------------
+		    //----------------------------------------------------
 
 		}
 	}

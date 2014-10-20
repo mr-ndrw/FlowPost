@@ -37,10 +37,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 
 		#region NavigationProperties
 
-		/// <summary>
-		///		Id of the last message posted to this Category.
-		/// </summary>
-		public int LastPostId { get; set; }
 
 		/// <summary>
 		///		Last message posted to this Category.
@@ -48,24 +44,9 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public Post LastPost { get; set; }
 
 		/// <summary>
-		///		Id of the last poster to this Category.
-		/// </summary>
-		public int LastPosterUserId { get; set; }
-
-		/// <summary>
-		///		Username of the last poster to this Category.
-		/// </summary>
-		public int LastPosterUserName{ get; set; }
-
-		/// <summary>
 		///		User who posted the last message to this Category.
 		/// </summary>
 		public User LastPoster { get; set; }
-
-		/// <summary>
-		///     Unique identifier of the CategoryGroup this Category belongs to.
-		/// </summary>
-		public int CategoryGroupId { get; set; }
 
 		/// <summary>
 		///     CategoryGroup to which this Category belongs to.

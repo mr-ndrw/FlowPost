@@ -34,8 +34,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// </summary>
 		public string RawContent { get; set; }
 
-		//TODO: RawContent - property?
-
 		/// <summary>
 		///     Date and time of the message being posted.
 		/// </summary>
@@ -44,26 +42,16 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// <summary>
 		///     Number of strikes against the Post.
 		/// </summary>
-		public UInt16 Strikes { get; set; }
-
-		/// <summary>
-		///     The Topic post to which this post is a reply.
-		/// </summary>
-		public Topic ParentTopic { get; set; }
+		public int Strikes { get; set; }
 
 		#endregion //Properties
 
 		#region NavigationProperties
 
-		/// <summary>
-		///     Id of the User which has posted this message.
-		/// </summary>
-		public string UserId { get; set; }
-
-		/// <summary>
-		///     Name of the User which has posted this message.
-		/// </summary>
-		public string UserName { get; set; }
+        /// <summary>
+        ///     The Topic post to which this post is a reply.
+        /// </summary>
+        public Topic ParentTopic { get; set; }
 
 		/// <summary>
 		///     User which has posted this message.

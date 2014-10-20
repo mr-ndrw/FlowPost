@@ -6,6 +6,12 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 {
 	public class FlowPostDataContext : DbContext
 	{
+        //public FlowPostDataContext()
+        //    : base("name=FlowPost")
+        //{
+	        
+        //}
+
 		public DbSet<User> Users { get; set; }
 		public DbSet<Post> Posts { get; set; }
 		public DbSet<Topic> Topics { get; set; }
@@ -20,7 +26,10 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<FlowPostDataContext>());
+
 			#region EntityConfigs
+
 			modelBuilder.Configurations.Add(new UserConfiguration());
 			modelBuilder.Configurations.Add(new GroupConfiguration());
 			modelBuilder.Configurations.Add(new CategoryGroupConfiguration());
@@ -32,8 +41,11 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 			modelBuilder.Configurations.Add(new PostEditConfiguration());
 			modelBuilder.Configurations.Add(new ReportConfiguration());
 			modelBuilder.Configurations.Add(new UserReportConfiguration());
-			modelBuilder.Configurations.Add(new PostReportConfiguration()); 
-			#endregion
+			modelBuilder.Configurations.Add(new PostReportConfiguration());
+            modelBuilder.Configurations.Add(new LoginConfiguration());
+            modelBuilder.Configurations.Add(new UserRoleConfiguration());
+
+            #endregion
 
 		}
 	}

@@ -53,16 +53,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		#endregion
 
 		#region NavigationProperties
-
-		/// <summary>
-		///		Id of the last User who has posted a message to this topic.
-		/// </summary>
-		public string LastPosterUserId{ get; set; }
-
-		/// <summary>
-		///		Name of the last User who has posted a message to this topic.
-		/// </summary>
-		public string LastPosterUserName { get; set; }
 		
 		/// <summary>
 		///		Last User who has posted under this topic.
@@ -70,19 +60,9 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public User LastPoster { get; set; }
 
 		/// <summary>
-		///		Id of the last posted message.
-		/// </summary>
-		public int LastPostId { get; set; }
-
-		/// <summary>
 		///		Last posted message.
 		/// </summary>
 		public Post LastPost { get; set; }
-
-		/// <summary>
-		///     Unique identifier of the catergory to which this Post belongs.
-		/// </summary>
-		public int CategoryId { get; set; }
 
 		/// <summary>
 		///     The catergory to which this Post belongs.
