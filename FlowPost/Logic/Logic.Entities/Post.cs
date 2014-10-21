@@ -6,10 +6,6 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 	/// <summary>
 	///     Posted message on the forum.
 	/// </summary>
-	/// <remarks>
-	///     No Entity Framework specific annotations were used.
-	///     For configuration purposes please refer to [ClassName]Configuration file in ~/Logic.Data/Configurations
-	/// </remarks>
 	public class Post
 	{
 		#region Properties

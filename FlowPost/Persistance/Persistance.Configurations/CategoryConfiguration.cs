@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
+﻿using System.Data.Entity.ModelConfiguration;
 using en.AndrewTorski.FlowPost.Logic.Entities;
 
-namespace en.AndrewTorski.FlowPost.Persistance.Data.Configurations
+namespace en.AndrewTorski.FlowPost.Persistance.Configurations
 {
 	/// <summary>
 	///		Configuration class for Category entity defining relationships between entities, column types and entity behaviours.

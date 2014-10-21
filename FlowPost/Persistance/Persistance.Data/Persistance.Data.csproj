@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>en.AndrewTorski.FlowPost.Persistance.Data</RootNamespace>
-    <AssemblyName>Persistance.Data</AssemblyName>
+    <AssemblyName>en.AndrewTorski.FlowPost.Persistance.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,9 +33,6 @@
     <Reference Include="EntityFramework">
       <HintPath>..\..\packages\EntityFramework.6.1.2-beta1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\packages\EntityFramework.6.1.2-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -43,30 +40,9 @@
       <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configurations\BanConfiguration.cs" />
-    <Compile Include="Configurations\CategoryConfiguration.cs" />
-    <Compile Include="Configurations\CategoryGroupConfiguration.cs" />
-    <Compile Include="Configurations\GroupConfiguration.cs" />
-    <Compile Include="Configurations\LoginConfiguration.cs" />
-    <Compile Include="Configurations\MessageConfiguration.cs" />
-    <Compile Include="Configurations\PostConfiguration.cs" />
-    <Compile Include="Configurations\PostEditConfiguration.cs" />
-    <Compile Include="Configurations\PostReportConfiguration.cs" />
-    <Compile Include="Configurations\ReportConfiguration.cs" />
-    <Compile Include="Configurations\RoleConfiguration.cs" />
-    <Compile Include="Configurations\TopicConfiguration.cs" />
-    <Compile Include="Configurations\UserConfiguration.cs" />
-    <Compile Include="Configurations\UserReportConfiguration.cs" />
-    <Compile Include="Configurations\UserRoleConfiguration.cs" />
     <Compile Include="FlowPostDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\SharedAssemblyInfo.cs" />
@@ -79,6 +55,10 @@
     <ProjectReference Include="..\..\Logic\Logic.Entities\Logic.Entities.csproj">
       <Project>{db143a1a-3364-4199-ae49-496b5a9bc134}</Project>
       <Name>Logic.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistance.Configurations\Persistance.Configurations.csproj">
+      <Project>{a59b0372-caa7-4e6a-98ac-8bb577e5373e}</Project>
+      <Name>Persistance.Configurations</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

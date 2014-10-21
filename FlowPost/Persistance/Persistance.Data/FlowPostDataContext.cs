@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 using en.AndrewTorski.FlowPost.Logic.Entities;
-using en.AndrewTorski.FlowPost.Persistance.Data.Configurations;
+using en.AndrewTorski.FlowPost.Persistance.Configurations;
 
 namespace en.AndrewTorski.FlowPost.Persistance.Data
 {

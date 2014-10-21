@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>en.AndrewTorski.FlowPost.Client.Console</RootNamespace>
-    <AssemblyName>Client.Console</AssemblyName>
+    <AssemblyName>en.AndrewTorski.FlowPost.Client.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
