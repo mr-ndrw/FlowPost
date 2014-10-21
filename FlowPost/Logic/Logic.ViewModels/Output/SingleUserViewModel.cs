@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using en.AndrewTorski.FlowPost.Logic.Entities;
 
 namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
@@ -9,9 +11,26 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
 	public class SingleUserViewModel
 	{
 		/// <summary>
+		///		Initializes the object with data from User entity. 
+		/// </summary>
+		/// <param name="user">
+		///		User for which we create a ViewModel.
+		/// </param>
+		public SingleUserViewModel(User user)
+		{
+			Id = user.Id;
+			UserName = user.UserName;
+			Age = DateTime.Now.Year - user.DateOfBirth.Year;
+			Country = user.Country;
+			Posts = user.Posts as List<Post>;
+			Posts.OrderByDescending(post => post.DateTime);//Sort
+			Groups = user.Groups as List<Group>;
+		}
+		/// <summary>
 		///		Id of the User.
 		/// </summary>
 		public int Id { get; set; }
+
 		/// <summary>
 		///		User name of the User.
 		/// </summary>
