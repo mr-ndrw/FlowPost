@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1BE7316F-F22C-475A-AFC6-AF6638B712BD}</ProjectGuid>
+    <ProjectGuid>{2717D829-DCDB-4154-BE47-7EF8CC3703DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>en.AndrewTorski.FlowPost.Persistance.Data</RootNamespace>
-    <AssemblyName>en.AndrewTorski.FlowPost.Persistance.Data</AssemblyName>
+    <RootNamespace>en.AndrewTorski.FlowPost.Test.Data</RootNamespace>
+    <AssemblyName>en.AndrewTorski.FlowPost.Test.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,6 +33,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\..\packages\EntityFramework.6.1.2-beta1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.2-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -40,27 +43,39 @@
       <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FlowPostDataContext.cs" />
-    <Compile Include="IFlowPostDataContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\SharedAssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <Compile Include="TestDbAsyncEnumerable.cs" />
+    <Compile Include="TestDbASyncEnumerator.cs" />
+    <Compile Include="TestDbAsyncQueryProvider.cs" />
+    <Compile Include="TestDbSet.cs" />
+    <Compile Include="TestFlowPostDataContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Logic\Logic.Entities\Logic.Entities.csproj">
       <Project>{db143a1a-3364-4199-ae49-496b5a9bc134}</Project>
       <Name>Logic.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Persistance.Configurations\Persistance.Configurations.csproj">
+    <ProjectReference Include="..\..\Persistance\Persistance.Configurations\Persistance.Configurations.csproj">
       <Project>{a59b0372-caa7-4e6a-98ac-8bb577e5373e}</Project>
       <Name>Persistance.Configurations</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Persistance\Persistance.Data\Persistance.Data.csproj">
+      <Project>{1be7316f-f22c-475a-afc6-af6638b712bd}</Project>
+      <Name>Persistance.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

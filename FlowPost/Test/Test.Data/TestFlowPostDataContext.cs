@@ -1,17 +1,25 @@
 ﻿using System.Data.Entity;
 using en.AndrewTorski.FlowPost.Logic.Entities;
 using en.AndrewTorski.FlowPost.Persistance.Configurations;
-using Microsoft.AspNet.Identity.EntityFramework;
-
-namespace en.AndrewTorski.FlowPost.Persistance.Data
+using en.AndrewTorski.FlowPost.Persistance.Data;
+/*	Constructed with the help of http://msdn.microsoft.com/en-us/data/dn314431.aspx	*/
+namespace en.AndrewTorski.FlowPost.Test.Data
 {
-	public class FlowPostDataContext : IdentityDbContext<User, Role, int, Login, UserRole, Claim>, IFlowPostDataContext
+	class TestFlowPostDataContext : IFlowPostDataContext
 	{
-        //public FlowPostDataContext()
-        //    : base("name=FlowPost")
-        //{
-	        
-        //}
+		public TestFlowPostDataContext()
+		{
+/*			Users = new TestDbSet<User>();
+			Posts = new TestDbSet<Post>();
+			Topics = new TestDbSet<Topic>();
+			Bans = new TestDbSet<Ban>();
+			PostEdits = new TestDbSet<PostEdit>();
+			Messages = new TestDbSet<Message>();
+			UserReports = new TestDbSet<UserReport>();
+			PostReports = new TestDbSet<PostReport>();
+			Categories = new TestDbSet<Category>();
+			CategoryGroups = new TestDbSet<CategoryGroup>();*/
+		}
 
 		public DbSet<User> Users { get; set; }
 		public DbSet<Post> Posts { get; set; }
@@ -24,10 +32,18 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		public DbSet<Category> Categories { get; set; }
 		public DbSet<CategoryGroup> CategoryGroups { get; set; }
 
+		// ReSharper disable once MemberCanBePrivate.Global
+		public int SaveChangesCount { get; private set; }
+
+		public int SaveChanges()
+		{
+			SaveChangesCount++;
+			return 1;
+		}
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<FlowPostDataContext>());
+			Database.SetInitializer(new DropCreateDatabaseIfModelChanges<FlowPostDataContext>());
 
 			#region EntityConfigs
 
@@ -46,7 +62,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 			//modelBuilder.Configurations.Add(new LoginConfiguration());
 			//modelBuilder.Configurations.Add(new UserRoleConfiguration());
 
-            #endregion
+			#endregion
 
 		}
 	}

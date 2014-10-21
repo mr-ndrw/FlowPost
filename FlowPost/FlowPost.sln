@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistance.Configurations"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic.ViewModels", "Logic\Logic.ViewModels\Logic.ViewModels.csproj", "{3DA1A9F3-50F5-40BD-8161-7DEB437D5BC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Data", "Test\Test.Data\Test.Data.csproj", "{2717D829-DCDB-4154-BE47-7EF8CC3703DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{3DA1A9F3-50F5-40BD-8161-7DEB437D5BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DA1A9F3-50F5-40BD-8161-7DEB437D5BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DA1A9F3-50F5-40BD-8161-7DEB437D5BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2717D829-DCDB-4154-BE47-7EF8CC3703DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2717D829-DCDB-4154-BE47-7EF8CC3703DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2717D829-DCDB-4154-BE47-7EF8CC3703DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2717D829-DCDB-4154-BE47-7EF8CC3703DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,5 +78,6 @@ Global
 		{0C970315-239C-4CF3-94B8-A56D5FF43354} = {467723EE-F8EF-4881-AEA8-E01287EE4E36}
 		{A59B0372-CAA7-4E6A-98AC-8BB577E5373E} = {534BCAF4-E25D-4C13-950D-82B0412E865D}
 		{3DA1A9F3-50F5-40BD-8161-7DEB437D5BC7} = {467723EE-F8EF-4881-AEA8-E01287EE4E36}
+		{2717D829-DCDB-4154-BE47-7EF8CC3703DE} = {57F1651E-EC5D-4FA5-9E21-9C90C6158A3F}
 	EndGlobalSection
 EndGlobal
