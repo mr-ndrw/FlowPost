@@ -1,6 +1,4 @@
-﻿
-using System;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace en.AndrewTorski.FlowPost.Logic.Entities
 {

@@ -39,12 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Output\SingleUserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\SharedAssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Input\" />
-    <Folder Include="Output\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logic.Entities\Logic.Entities.csproj">
+      <Project>{db143a1a-3364-4199-ae49-496b5a9bc134}</Project>
+      <Name>Logic.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

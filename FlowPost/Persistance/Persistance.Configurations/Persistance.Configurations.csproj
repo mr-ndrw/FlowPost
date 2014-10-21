@@ -60,6 +60,7 @@
     <Compile Include="PostConfiguration.cs" />
     <Compile Include="PostEditConfiguration.cs" />
     <Compile Include="PostReportConfiguration.cs" />
+    <Compile Include="Properties\SharedAssemblyInfo.cs" />
     <Compile Include="ReportConfiguration.cs" />
     <Compile Include="RoleConfiguration.cs" />
     <Compile Include="TopicConfiguration.cs" />

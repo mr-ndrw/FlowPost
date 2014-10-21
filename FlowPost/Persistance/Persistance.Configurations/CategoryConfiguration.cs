@@ -48,7 +48,6 @@ namespace en.AndrewTorski.FlowPost.Persistance.Configurations
 
 			/*	LastPoster
 			 */
-			//TODO: Check if below is correct?
 		    HasOptional(category => category.LastPoster)
 		        .WithMany();
 
@@ -56,8 +55,6 @@ namespace en.AndrewTorski.FlowPost.Persistance.Configurations
 
 			/*	LastPost
 			 */
-			//TODO: Check if below is correct?
-			//TODO: Map ForeignKey to Post?
 			HasOptional(category => category.LastPost)
 				.WithOptionalDependent();
 
