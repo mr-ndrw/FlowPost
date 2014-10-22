@@ -22,8 +22,8 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
 			UserName = user.UserName;
 			Age = DateTime.Now.Year - user.DateOfBirth.Year;
 			Country = user.Country;
-			Posts = user.Posts as List<Post>;
-			Posts.OrderByDescending(post => post.DateTime);//Sort
+			//Posts = user.Posts as List<Post>;
+			//Posts.OrderByDescending(post => post.DateTime);//Sort
 			Groups = user.Groups as List<Group>;
 		}
 		/// <summary>

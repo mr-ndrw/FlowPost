@@ -62,11 +62,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Logic\Logic.Entities\Logic.Entities.csproj">
+    <ProjectReference Include="..\..\Logic\Logic.Entities\Logic.Entities.csproj">
       <Project>{db143a1a-3364-4199-ae49-496b5a9bc134}</Project>
       <Name>Logic.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Persistance\Persistance.Data\Persistance.Data.csproj">
+    <ProjectReference Include="..\..\Persistance\Persistance.Data\Persistance.Data.csproj">
       <Project>{1be7316f-f22c-475a-afc6-af6638b712bd}</Project>
       <Name>Persistance.Data</Name>
     </ProjectReference>

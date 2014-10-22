@@ -5,26 +5,102 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace en.AndrewTorski.FlowPost.Persistance.Data
 {
+
+	/// <summary>
+	///		Persistance layer class giving enabling access of upper layers(business logic layer) to Data Access Layer.
+	/// </summary>
 	public class FlowPostDataContext : IdentityDbContext<User, Role, int, Login, UserRole, Claim>, IFlowPostDataContext
 	{
-        //public FlowPostDataContext()
-        //    : base("name=FlowPost")
-        //{
-	        
-        //}
 
-		public DbSet<User> Users { get; set; }
+		/// <summary>
+		///		Initializes a new instance of the <see cref="FlowPostDataContext"/> class.
+		/// </summary>
+		/// <remarks>
+		///		Connects to the Connection Configuration with the name "FlowPost".
+		/// </remarks>
+		public FlowPostDataContext()
+			: base("name=FlowPost")
+		{
+
+		}
+
+		/// <summary>
+		/// Gets or sets the users.
+		/// </summary>
+		/// <value>
+		/// The users.
+		/// </value>
+		public virtual DbSet<User> Users { get; set; }
+		/// <summary>
+		/// Gets or sets the posts.
+		/// </summary>
+		/// <value>
+		/// The posts.
+		/// </value>
 		public DbSet<Post> Posts { get; set; }
+		/// <summary>
+		/// Gets or sets the topics.
+		/// </summary>
+		/// <value>
+		/// The topics.
+		/// </value>
 		public DbSet<Topic> Topics { get; set; }
+		/// <summary>
+		/// Gets or sets the bans.
+		/// </summary>
+		/// <value>
+		/// The bans.
+		/// </value>
 		public DbSet<Ban> Bans { get; set; }
+		/// <summary>
+		/// Gets or sets the post edits.
+		/// </summary>
+		/// <value>
+		/// The post edits.
+		/// </value>
 		public DbSet<PostEdit> PostEdits { get; set; }
+		/// <summary>
+		/// Gets or sets the messages.
+		/// </summary>
+		/// <value>
+		/// The messages.
+		/// </value>
 		public DbSet<Message> Messages { get; set; }
+		/// <summary>
+		/// Gets or sets the user reports.
+		/// </summary>
+		/// <value>
+		/// The user reports.
+		/// </value>
 		public DbSet<UserReport> UserReports { get; set; }
+		/// <summary>
+		/// Gets or sets the post reports.
+		/// </summary>
+		/// <value>
+		/// The post reports.
+		/// </value>
 		public DbSet<PostReport> PostReports { get; set; }
+		/// <summary>
+		/// Gets or sets the categories.
+		/// </summary>
+		/// <value>
+		/// The categories.
+		/// </value>
 		public DbSet<Category> Categories { get; set; }
+		/// <summary>
+		/// Gets or sets the category groups.
+		/// </summary>
+		/// <value>
+		/// The category groups.
+		/// </value>
 		public DbSet<CategoryGroup> CategoryGroups { get; set; }
 
 
+
+		/// <summary>
+		///		Called when creating the model. Configures tables to match given Model criteria.
+		/// </summary>
+		/// <param name="modelBuilder">The model builder.</param>
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<FlowPostDataContext>());

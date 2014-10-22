@@ -7,14 +7,17 @@ using en.AndrewTorski.FlowPost.Persistance.Data;
 namespace en.AndrewTorski.FlowPost.Logic.Core.Services
 {
 	/// <summary>
-	///     Exposes
+	///		Exposes functionalities associtated with retiving and manipulating data around User entity.
 	/// </summary>
 	public class UserService : IUserService
 	{
-		private readonly FlowPostDataContext _dataContext;
+		private readonly IFlowPostDataContext _dataContext;
 
-
-		public UserService(FlowPostDataContext dataContext)
+		/// <summary>
+		///		Dependency injection constructor.
+		/// </summary>
+		/// <param name="dataContext"></param>
+		public UserService(IFlowPostDataContext dataContext)
 		{
 			_dataContext = dataContext;
 		}
@@ -30,13 +33,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Core.Services
 		/// </returns>
 		public SingleUserViewModel GetUserById(int id)
 		{
-			//	First check if such User exists.
-			//	Consider: Integrate somehow to include a fast Include of User's Posts?
-			User userToFind = _dataContext.Users
-				.Include("Groups")
-				.Include("Posts")
+			var userToFind = _dataContext.Users
+				/*.Include("Groups")
+				.Include("Posts")*/
 				.SingleOrDefault(u => u.Id == id);
-
+			//	First check if such User exists.
 			if (userToFind == null)
 			{
 				return null;
