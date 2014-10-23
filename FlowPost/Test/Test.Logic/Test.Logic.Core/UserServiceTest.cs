@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using en.AndrewTorski.FlowPost.Logic.Core.IServices;
+﻿using en.AndrewTorski.FlowPost.Logic.Core.IServices;
 using en.AndrewTorski.FlowPost.Logic.Core.Services;
-using en.AndrewTorski.FlowPost.Logic.Entities;
 using en.AndrewTorski.FlowPost.Logic.ViewModels.Output;
 using en.AndrewTorski.FlowPost.Persistance.Data;
-using Moq;
+using en.AndrewTorski.FlowPost.Test.Data;
 using NUnit.Framework;
 
-namespace Test.Logic.Core
+namespace en.AndrewTorski.FlowPost.Test.Logic.Core
 {
 	/// <summary>
 	///     Test class for UserService class.
@@ -18,10 +13,27 @@ namespace Test.Logic.Core
 	[TestFixture]
 	public class UserServiceTest
 	{
+/*
+ *		Consider: Unit Test strategy.
+ *		1)	a.	Initialize the DbSets with an arbitrary number of entity with Random data. 
+ *			b.	Upon entering the Unit Test [method] pick a random entity directly from the _dbContext and choose it for testing.
+ *			c.	Make a deep copy of that entity.
+ *			d.	Send the original entity to methods, operations, etc.
+ *			e.	After the tested functionality has returned to the Unit Test compare the returned object values, behaviour etc.
+ *				with modified EXPECTED values of the Deep Copied entity.
+ *		
+ *		2)	a.	?
+ */
+
 		/// <summary>
 		///     Service which is being tested in this Test.
 		/// </summary>
 		private IUserService _userService;
+
+		/// <summary>
+		///		The database context.
+		/// </summary>
+		private IFlowPostDataContext _dbContext;
 
 		/// <summary>
 		///     Initializes the data for the test.
@@ -29,45 +41,17 @@ namespace Test.Logic.Core
 		[TestFixtureSetUp]
 		public void InitialSetup()
 		{
-			//	Mock DbSets that we are going to use througout the tests.
+			//	Initialize mocked and preconfigured DataContext using TestDataProvider instance.
+			var dataProvider = new TestDataProvider();
+			_dbContext = dataProvider.MockedDbContext.Object;
 
-			IQueryable<User> userData = new List<User>
-			{
-				// User id = 65 has no Groups nor Posts attached to him.
-				new User
-				{
-					Id = 65,
-					UserName = "Test",
-					DateOfBirth = new DateTime(1993, 12, 13),
-					Email = "test@test.test",
-					PasswordHash = "test",
-					NumberOfPosts = 0
-				}
-			}.AsQueryable();
-
-
-			var mockUserSet = new Mock<DbSet<User>>();
-			mockUserSet.As<IQueryable<User>>().Setup(m => m.Provider).Returns(userData.Provider);
-			mockUserSet.As<IQueryable<User>>().Setup(m => m.Expression).Returns(userData.Expression);
-			mockUserSet.As<IQueryable<User>>().Setup(m => m.ElementType).Returns(userData.ElementType);
-			mockUserSet.As<IQueryable<User>>().Setup(m => m.GetEnumerator()).Returns(userData.GetEnumerator());
-
-			//	~End of mocked DbSets.
-
-			//	Mock FlowPostDataContext.
-			var mockContext = new Mock<FlowPostDataContext>();
-			mockContext.Setup(context => context.Users).Returns(mockUserSet.Object);
-			//	~End of context mocking.
-
-			//	Instantiate _userService
-
-			_userService = new UserService(mockContext.Object);
+			_userService = new UserService(_dbContext);
 		}
 
 		[Test]
 		public void GetUserByIdTestExists()
 		{
-			var foundUser = _userService.GetUserById(65);
+			SingleUserViewModel foundUser = _userService.GetUserById(65);
 
 			Assert.That(foundUser.Id, Is.EqualTo(65));
 			Assert.That(foundUser.UserName, Is.EqualTo("Test"));

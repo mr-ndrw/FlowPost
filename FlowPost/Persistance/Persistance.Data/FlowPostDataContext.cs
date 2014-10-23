@@ -16,89 +16,112 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		///		Initializes a new instance of the <see cref="FlowPostDataContext"/> class.
 		/// </summary>
 		/// <remarks>
-		///		Connects to the Connection Configuration with the name "FlowPost".
+		///		Connects to the Default Connection.
 		/// </remarks>
 		public FlowPostDataContext()
-//			: base("name=FlowPost")
 		{
 
 		}
 
-//		public DbSet<User> Users { get; set; }
-		
 		/// <summary>
-		/// Gets or sets the posts.
+		///		Initializes a new instance of the <see cref="FlowPostDataContext"/> class.
+		/// </summary>
+		/// <param name="connectionName">
+		///		Name of the connection.
+		/// </param>
+		public FlowPostDataContext(string connectionName)
+			: base(string.Format("Name={0}", connectionName))
+			//	we use string.Format so that we get a nice format that is understood by the Constructor.
+			//	For instance: if we passed simple "FlowPost" into the base constructor WITHOUT "Name=" prepending it
+			//	we would not be able to connect.
+		{
+			
+		}
+
+		#region Properties
+
+		/// <summary>
+		///		Gets or sets the posts.
 		/// </summary>
 		/// <value>
-		/// The posts.
+		///		The posts.
 		/// </value>
-		
 		public DbSet<Post> Posts { get; set; }
+
 		/// <summary>
-		/// Gets or sets the topics.
+		///		Gets or sets the topics.
 		/// </summary>
 		/// <value>
-		/// The topics.
+		///		The topics.
 		/// </value>
 		public DbSet<Topic> Topics { get; set; }
 
 		/// <summary>
-		/// Gets or sets the bans.
+		///		Gets or sets the bans.
 		/// </summary>
 		/// <value>
-		/// The bans.
+		///		The bans.
 		/// </value>
 		public DbSet<Ban> Bans { get; set; }
 
 		/// <summary>
-		/// Gets or sets the post edits.
+		///		Gets or sets the post edits.
 		/// </summary>
 		/// <value>
-		/// The post edits.
+		///		The post edits.
 		/// </value>
 		public DbSet<PostEdit> PostEdits { get; set; }
 
 		/// <summary>
-		/// Gets or sets the messages.
+		///		Gets or sets the messages.
 		/// </summary>
 		/// <value>
-		/// The messages.
+		///		The messages.
 		/// </value>
 		public DbSet<Message> Messages { get; set; }
 
 		/// <summary>
-		/// Gets or sets the user reports.
+		///		Gets or sets the user reports.
 		/// </summary>
 		/// <value>
-		/// The user reports.
+		///		The user reports.
 		/// </value>
 		public DbSet<UserReport> UserReports { get; set; }
 
 		/// <summary>
-		/// Gets or sets the post reports.
+		///		Gets or sets the post reports.
 		/// </summary>
 		/// <value>
-		/// The post reports.
+		///		The post reports.
 		/// </value>
 		public DbSet<PostReport> PostReports { get; set; }
 
 		/// <summary>
-		/// Gets or sets the categories.
+		///		Gets or sets the categories.
 		/// </summary>
 		/// <value>
-		/// The categories.
+		///		The categories.
 		/// </value>
 		public DbSet<Category> Categories { get; set; }
 
 		/// <summary>
-		/// Gets or sets the category groups.
+		///		Gets or sets the category groups.
 		/// </summary>
 		/// <value>
-		/// The category groups.
+		///		The category groups.
 		/// </value>
 		public DbSet<CategoryGroup> CategoryGroups { get; set; }
 
 
+		/// <summary>
+		///		Gets or sets the groups.
+		/// </summary>
+		/// <value>
+		///		The groups.
+		/// </value>
+		public DbSet<Group> Groups { get; set; } 
+
+		#endregion
 
 		/// <summary>
 		///		Called when creating the model. Configures tables to match given Model criteria.

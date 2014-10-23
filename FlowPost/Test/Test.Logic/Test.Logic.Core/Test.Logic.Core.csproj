@@ -6,8 +6,8 @@
     <ProjectGuid>{44476A64-CBE6-4C42-B922-D2DF327E7D7A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test.Logic.Core</RootNamespace>
-    <AssemblyName>Test.Logic.Core</AssemblyName>
+    <RootNamespace>en.AndrewTorski.FlowPost.Test.Logic.Core</RootNamespace>
+    <AssemblyName>en.AndrewTorski.FlowPost.Test.Logic.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -108,6 +108,10 @@
     <ProjectReference Include="..\..\..\Persistance\Persistance.Data\Persistance.Data.csproj">
       <Project>{1be7316f-f22c-475a-afc6-af6638b712bd}</Project>
       <Name>Persistance.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Test.Data\Test.Data.csproj">
+      <Project>{2717D829-DCDB-4154-BE47-7EF8CC3703DE}</Project>
+      <Name>Test.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
