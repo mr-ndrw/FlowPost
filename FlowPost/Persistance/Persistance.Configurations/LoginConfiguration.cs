@@ -7,7 +7,8 @@ namespace en.AndrewTorski.FlowPost.Persistance.Configurations
     {
         public LoginConfiguration()
         {
-            HasKey(login => login.UserId);
+			//	Primary Key;
+	        HasKey(login => new {login.LoginProvider, login.ProviderKey, login.UserId});
         }
     }
 }

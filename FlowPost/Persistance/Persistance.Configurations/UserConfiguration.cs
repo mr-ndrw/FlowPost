@@ -1,4 +1,6 @@
-﻿using System.Data.Entity.ModelConfiguration;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Infrastructure.Annotations;
+using System.Data.Entity.ModelConfiguration;
 using en.AndrewTorski.FlowPost.Logic.Entities;
 
 namespace en.AndrewTorski.FlowPost.Persistance.Configurations
@@ -48,7 +50,8 @@ namespace en.AndrewTorski.FlowPost.Persistance.Configurations
 
 			Property(user => user.UserName)
 				.IsRequired()
-				.HasMaxLength(20);
+				.HasMaxLength(256)
+				.HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute("UserNameIndex") { IsUnique = true }));
 
 			Property(user => user.Email)
 				.IsRequired()
@@ -80,6 +83,23 @@ namespace en.AndrewTorski.FlowPost.Persistance.Configurations
 				.IsRequired();
 
 			//----------------------------------------------------
+
+			//	ASP.NET Identity configuration:
+			HasMany(u => u.Roles)
+				.WithRequired()
+				.HasForeignKey(ur => ur.UserId);
+
+			HasMany(u => u.Claims)
+				.WithRequired()
+				.HasForeignKey(uc => uc.UserId);
+
+			HasMany(u => u.Logins)
+				.WithRequired()
+				.HasForeignKey(ul => ul.UserId);
+
+			//----------------------------------------------------
+
+
 		}
 	}
 }
