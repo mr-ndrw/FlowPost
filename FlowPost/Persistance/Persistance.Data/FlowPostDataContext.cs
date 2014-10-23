@@ -19,24 +19,20 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		///		Connects to the Connection Configuration with the name "FlowPost".
 		/// </remarks>
 		public FlowPostDataContext()
-			: base("name=FlowPost")
+//			: base("name=FlowPost")
 		{
 
 		}
 
-		/// <summary>
-		/// Gets or sets the users.
-		/// </summary>
-		/// <value>
-		/// The users.
-		/// </value>
-		public virtual DbSet<User> Users { get; set; }
+//		public DbSet<User> Users { get; set; }
+		
 		/// <summary>
 		/// Gets or sets the posts.
 		/// </summary>
 		/// <value>
 		/// The posts.
 		/// </value>
+		
 		public DbSet<Post> Posts { get; set; }
 		/// <summary>
 		/// Gets or sets the topics.
@@ -45,6 +41,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// The topics.
 		/// </value>
 		public DbSet<Topic> Topics { get; set; }
+
 		/// <summary>
 		/// Gets or sets the bans.
 		/// </summary>
@@ -52,6 +49,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// The bans.
 		/// </value>
 		public DbSet<Ban> Bans { get; set; }
+
 		/// <summary>
 		/// Gets or sets the post edits.
 		/// </summary>
@@ -59,6 +57,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// The post edits.
 		/// </value>
 		public DbSet<PostEdit> PostEdits { get; set; }
+
 		/// <summary>
 		/// Gets or sets the messages.
 		/// </summary>
@@ -66,6 +65,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// The messages.
 		/// </value>
 		public DbSet<Message> Messages { get; set; }
+
 		/// <summary>
 		/// Gets or sets the user reports.
 		/// </summary>
@@ -73,6 +73,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// The user reports.
 		/// </value>
 		public DbSet<UserReport> UserReports { get; set; }
+
 		/// <summary>
 		/// Gets or sets the post reports.
 		/// </summary>
@@ -80,6 +81,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// The post reports.
 		/// </value>
 		public DbSet<PostReport> PostReports { get; set; }
+
 		/// <summary>
 		/// Gets or sets the categories.
 		/// </summary>
@@ -87,6 +89,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// The categories.
 		/// </value>
 		public DbSet<Category> Categories { get; set; }
+
 		/// <summary>
 		/// Gets or sets the category groups.
 		/// </summary>
@@ -119,8 +122,8 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 			modelBuilder.Configurations.Add(new ReportConfiguration());
 			modelBuilder.Configurations.Add(new UserReportConfiguration());
 			modelBuilder.Configurations.Add(new PostReportConfiguration());
-			//modelBuilder.Configurations.Add(new LoginConfiguration());
-			//modelBuilder.Configurations.Add(new UserRoleConfiguration());
+			modelBuilder.Configurations.Add(new LoginConfiguration());
+			modelBuilder.Configurations.Add(new UserRoleConfiguration());
 
             #endregion
 

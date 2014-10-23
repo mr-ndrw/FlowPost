@@ -20,7 +20,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The users.
 		/// </value>
-		DbSet<User> Users { get; set; }
+		IDbSet<User> Users { get; set; }
 		/// <summary>
 		///		Gets or sets the posts.
 		/// </summary>
