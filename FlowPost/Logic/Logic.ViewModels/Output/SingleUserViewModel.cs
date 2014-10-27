@@ -21,10 +21,8 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
 			Id = user.Id;
 			UserName = user.UserName;
 			Age = DateTime.Now.Year - user.DateOfBirth.Year;
+			DateOfRegistration = user.DateOfRegistration;
 			Country = user.Country;
-			//Posts = user.Posts as List<Post>;
-			//Posts.OrderByDescending(post => post.DateTime);//Sort
-			Groups = user.Groups as List<Group>;
 		}
 		/// <summary>
 		///		Id of the User.
@@ -42,6 +40,11 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
 		public int Age { get; set; }
 
 		/// <summary>
+		///		Date of the user's registration.
+		/// </summary>
+		public DateTime DateOfRegistration { get; set; }
+
+		/// <summary>
 		///		Country in which this User lives.
 		/// </summary>
 		public string Country { get; set; }
@@ -50,24 +53,5 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
 		///		Number of topics, replies written by this user.
 		/// </summary>
 		public int NumberOfPosts { get; set; }
-
-		/// <summary>
-		///		List of descendingly sorted(by date) Posts written by this user.
-		/// </summary>
-		/// <remarks>
-		///		Descendingly sorted, so that we obtain newer posts in the beginning of the List.
-		/// </remarks>
-		/* Consider: Will this include Topics as well? 
-		 *		And if so, to what will the reference in Web Application redirect?
-		 * Consider: Should it be documented that the count may be equal to zero?
-		 */
-		public List<Post> Posts { get; set; }
-
-		/// <summary>
-		///		List of Groups to which this User belongs.
-		/// </summary>
-		/*	Consider: Should it be considered that EVERYONE could have a view into what Groups a User belongs to?
-		 */
-		public List<Group> Groups { get; set; }
 	}
 }

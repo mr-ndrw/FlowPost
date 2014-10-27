@@ -25,6 +25,11 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public DateTime DateOfBirth { get; set; }
 
 		/// <summary>
+		///		Date of the user's registration.
+		/// </summary>
+		public DateTime DateOfRegistration { get; set; }
+
+		/// <summary>
 		///     User's country.
 		/// </summary>
 		public string Country { get; set; }

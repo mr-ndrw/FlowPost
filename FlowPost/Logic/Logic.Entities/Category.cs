@@ -10,6 +10,8 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 	{
 		#region Properties
 
+		//Consider: Description property.
+
 		/// <summary>
 		///     Category's unique identifier which serves as the Key.
 		/// </summary>
@@ -21,18 +23,18 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		public string Name { get; set; }
 
 		/// <summary>
-		///     Parent category of this Category. If null, then Category is a root Category.
-		/// </summary>
-		public Category ParentCategory { get; set; }
-
-		/// <summary>
 		///		Date and time of the last posted message in this Category.
 		/// </summary>
 		public DateTime LastPostDateTime { get; set; }
+
 		#endregion
 
 		#region NavigationProperties
 
+		/// <summary>
+		///     Parent category of this Category. If null, then Category is a root Category.
+		/// </summary>
+		public Category ParentCategory { get; set; }
 
 		/// <summary>
 		///		Last message posted to this Category.
