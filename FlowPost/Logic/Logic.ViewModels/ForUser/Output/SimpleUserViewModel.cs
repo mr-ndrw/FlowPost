@@ -1,4 +1,6 @@
-﻿namespace en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output
+﻿using en.AndrewTorski.FlowPost.Logic.Entities;
+
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForUser.Output
 {
 	/// <summary>
 	///		Contains very simple data about the user.
@@ -8,6 +10,18 @@
 	/// </remarks>
 	public class SimpleUserViewModel
 	{
+		/// <summary>
+		///		Initializes the object with data from User.
+		/// </summary>
+		/// <param name="user">
+		///		User for which we obtain ViewModel.
+		/// </param>
+		public SimpleUserViewModel(User user)
+		{
+			Id = user.Id;
+			UserName = user.UserName;
+		}
+
 		/// <summary>
 		///		Id of the user.
 		/// </summary>

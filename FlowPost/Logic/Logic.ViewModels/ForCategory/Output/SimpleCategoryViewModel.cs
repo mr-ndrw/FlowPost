@@ -1,4 +1,4 @@
-﻿namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Category.Output
+﻿namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output
 {
 	/// <summary>
 	///		Contains very simple data about a category.

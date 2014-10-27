@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.Topic.Output;
+using en.AndrewTorski.FlowPost.Logic.Entities;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForTopic.Output;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Category.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output
 {
 	/// <summary>
 	///		Contains all needed data to correctly reperesent a category, when it is accessed.
@@ -11,6 +12,16 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Category.Output
 	/// </remarks>
 	public class CategoryViewModel
 	{
+		public CategoryViewModel(Category category)
+		{
+			Id = category.Id;
+			Name = category.Name;
+			ParentCategory = new ListedCategoryViewModel(category.ParentCategory);
+
+		}
+
+
+
 		/// <summary>
 		///		Id of the category.
 		/// </summary>

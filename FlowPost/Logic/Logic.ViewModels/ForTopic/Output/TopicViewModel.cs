@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.Category.Output;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.Post.Output;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForPost.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForUser.Output;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Topic.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForTopic.Output
 {
 	/// <summary>
 	///		Contains data about the topic post itself and all children posts.

@@ -1,6 +1,7 @@
 ﻿using System;
+using en.AndrewTorski.FlowPost.Logic.Entities;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Post.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForPost.Output
 {
 	/// <summary>
 	///		Contains very simple data about a posted message.
@@ -10,6 +11,15 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Post.Output
 	/// </remarks>
 	public class SimplePostViewModel
 	{
+		/// <summary>
+		///		Initi
+		/// </summary>
+		public SimplePostViewModel(Post post)
+		{
+			Id = post.Id;
+			DateOfPosting = post.DateTime;
+		}
+
 		/// <summary>
 		///		Id of the posted message.
 		/// </summary>

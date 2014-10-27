@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForUser.Output
 {
 	/// <summary>
 	///		Encapsulates basic information(name, country, age, groups, his posts[topics and replies]) about a single user for simple displaying.

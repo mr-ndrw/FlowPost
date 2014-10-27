@@ -55,27 +55,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryGroup\Output\CategoryGroupViewModel.cs" />
-    <Compile Include="Category\Output\CategoryViewModel.cs" />
-    <Compile Include="Category\Output\ListedCategoryViewModel.cs" />
-    <Compile Include="Topic\Output\ListedTopicViewModel.cs" />
-    <Compile Include="Post\Output\PostViewModel.cs" />
-    <Compile Include="Category\Output\SimpleCategoryViewModel.cs" />
-    <Compile Include="Post\Output\SimplePostViewModel.cs" />
-    <Compile Include="User\Output\SimpleUserViewModel.cs" />
-    <Compile Include="User\Output\SingleUserViewModel.cs" />
-    <Compile Include="Topic\Output\TopicViewModel.cs" />
+    <Compile Include="ForCategoryGroup\Output\CategoryGroupViewModel.cs" />
+    <Compile Include="ForCategory\Output\CategoryViewModel.cs" />
+    <Compile Include="ForCategory\Output\ListedCategoryViewModel.cs" />
+    <Compile Include="ForTopic\Output\ListedTopicViewModel.cs" />
+    <Compile Include="ForPost\Output\PostViewModel.cs" />
+    <Compile Include="ForCategory\Output\SimpleCategoryViewModel.cs" />
+    <Compile Include="ForPost\Output\SimplePostViewModel.cs" />
+    <Compile Include="ForUser\Output\SimpleUserViewModel.cs" />
+    <Compile Include="ForUser\Output\SingleUserViewModel.cs" />
+    <Compile Include="ForTopic\Output\TopicViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\SharedAssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CategoryGroup\Input\" />
-    <Folder Include="Category\Input\" />
-    <Folder Include="Input\" />
-    <Folder Include="Output\" />
-    <Folder Include="Post\Input\" />
-    <Folder Include="Topic\Input\" />
-    <Folder Include="User\Input\" />
+    <Folder Include="ForCategoryGroup\Input\" />
+    <Folder Include="ForCategory\Input\" />
+    <Folder Include="ForPost\Input\" />
+    <Folder Include="ForTopic\Input\" />
+    <Folder Include="ForUser\Input\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Logic.Entities\Logic.Entities.csproj">

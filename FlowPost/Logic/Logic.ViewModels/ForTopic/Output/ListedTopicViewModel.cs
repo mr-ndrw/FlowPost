@@ -1,8 +1,8 @@
 ﻿using System;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.Post.Output;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForPost.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForUser.Output;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Topic.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForTopic.Output
 {
 	/// <summary>
 	///		Contains simple data about a topic which is used in listing contexts.

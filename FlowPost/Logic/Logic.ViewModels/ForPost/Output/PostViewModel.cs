@@ -1,7 +1,7 @@
 ﻿using System;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForUser.Output;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Post.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForPost.Output
 {
 	public class PostViewModel
 	{

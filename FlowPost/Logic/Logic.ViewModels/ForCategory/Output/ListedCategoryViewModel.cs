@@ -1,7 +1,8 @@
-﻿using en.AndrewTorski.FlowPost.Logic.ViewModels.Post.Output;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output;
+﻿using en.AndrewTorski.FlowPost.Logic.Entities;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForPost.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForUser.Output;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Category.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output
 {
 	/// <summary>
 	///		Contains simple data about a category which is used in listing contexts.
@@ -11,6 +12,18 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Category.Output
 	/// </remarks>
 	public class ListedCategoryViewModel
 	{
+		/// <summary>
+		///		
+		/// </summary>
+		/// <param name="category"></param>
+		public ListedCategoryViewModel(Category category)
+		{
+			Id = category.Id;
+			Name = category.Name;
+			LastPost = new SimplePostViewModel(category.LastPost);
+			LastPoster = new SimpleUserViewModel(category.LastPoster);
+		}
+
 		/// <summary>
 		///     Category's unique identifier which serves as the Key.
 		/// </summary>
