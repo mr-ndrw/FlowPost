@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.Category.Output;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.CategoryGroup.Output
 {
 	/// <summary>
 	///		Category group with included children categories.

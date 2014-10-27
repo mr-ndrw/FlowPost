@@ -55,19 +55,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Output\CategoryGroupViewModel.cs" />
-    <Compile Include="Output\CategoryViewModel.cs" />
-    <Compile Include="Output\ListedCategoryViewModel.cs" />
-    <Compile Include="Output\ListedTopicViewModel.cs" />
-    <Compile Include="Output\PostViewModel.cs" />
-    <Compile Include="Output\SimplePostViewModel.cs" />
-    <Compile Include="Output\SimpleUserViewModel.cs" />
-    <Compile Include="Output\SingleUserViewModel.cs" />
+    <Compile Include="CategoryGroup\Output\CategoryGroupViewModel.cs" />
+    <Compile Include="Category\Output\CategoryViewModel.cs" />
+    <Compile Include="Category\Output\ListedCategoryViewModel.cs" />
+    <Compile Include="Topic\Output\ListedTopicViewModel.cs" />
+    <Compile Include="Post\Output\PostViewModel.cs" />
+    <Compile Include="Category\Output\SimpleCategoryViewModel.cs" />
+    <Compile Include="Post\Output\SimplePostViewModel.cs" />
+    <Compile Include="User\Output\SimpleUserViewModel.cs" />
+    <Compile Include="User\Output\SingleUserViewModel.cs" />
+    <Compile Include="Topic\Output\TopicViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\SharedAssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CategoryGroup\Input\" />
+    <Folder Include="Category\Input\" />
     <Folder Include="Input\" />
+    <Folder Include="Output\" />
+    <Folder Include="Post\Input\" />
+    <Folder Include="Topic\Input\" />
+    <Folder Include="User\Input\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Logic.Entities\Logic.Entities.csproj">

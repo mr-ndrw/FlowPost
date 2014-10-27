@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.Topic.Output;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Category.Output
 {
 	/// <summary>
 	///		Contains all needed data to correctly reperesent a category, when it is accessed.
@@ -34,5 +35,6 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
 		///		Collection of Topics posted to this category.
 		/// </summary>
 		public List<ListedTopicViewModel> Topics { get; set; }
+
 	}
 }

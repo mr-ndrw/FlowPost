@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using en.AndrewTorski.FlowPost.Logic.Entities;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output
 {
 	/// <summary>
 	///		Encapsulates basic information(name, country, age, groups, his posts[topics and replies]) about a single user for simple displaying.
@@ -16,7 +13,7 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
 		/// <param name="user">
 		///		User for which we create a ViewModel.
 		/// </param>
-		public SingleUserViewModel(User user)
+		public SingleUserViewModel(Entities.User user)
 		{
 			Id = user.Id;
 			UserName = user.UserName;

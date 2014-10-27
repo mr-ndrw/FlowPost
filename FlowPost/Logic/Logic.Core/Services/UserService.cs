@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using en.AndrewTorski.FlowPost.Logic.Core.IServices;
 using en.AndrewTorski.FlowPost.Logic.Entities;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output;
 using en.AndrewTorski.FlowPost.Persistance.Data;
 
 namespace en.AndrewTorski.FlowPost.Logic.Core.Services

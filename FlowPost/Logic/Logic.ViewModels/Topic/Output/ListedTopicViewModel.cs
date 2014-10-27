@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Migrations.Model;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.Post.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output;
 
-namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Output
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.Topic.Output
 {
 	/// <summary>
 	///		Contains simple data about a topic which is used in listing contexts.

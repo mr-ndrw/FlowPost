@@ -1,4 +1,4 @@
-﻿using en.AndrewTorski.FlowPost.Logic.ViewModels.Output;
+﻿using en.AndrewTorski.FlowPost.Logic.ViewModels.User.Output;
 
 namespace en.AndrewTorski.FlowPost.Logic.Core.IServices
 {
