@@ -1,5 +1,8 @@
-﻿using en.AndrewTorski.FlowPost.Logic.Core.IServices;
+﻿using System.Collections.Generic;
+using System.Linq;
+using en.AndrewTorski.FlowPost.Logic.Core.IServices;
 using en.AndrewTorski.FlowPost.Logic.Core.Services;
+using en.AndrewTorski.FlowPost.Logic.Entities;
 using en.AndrewTorski.FlowPost.Logic.ViewModels.Output;
 using en.AndrewTorski.FlowPost.Persistance.Data;
 using en.AndrewTorski.FlowPost.Test.Data;
@@ -41,26 +44,63 @@ namespace en.AndrewTorski.FlowPost.Test.Logic.Core
 		[TestFixtureSetUp]
 		public void InitialSetup()
 		{
-			//	Initialize mocked and preconfigured DataContext using TestDataProvider instance.
-			var dataProvider = new TestDataProvider();
+			//	Initialize mocked and preconfigured DataContext using MockedDbContextProvider instance.
+
+			var user = new User
+			{
+				Id = 65,
+				UserName =  "Test",
+				NumberOfPosts = 0
+			};
+
+			var data = new List<User>{user};
+
+			var dataProvider = new MockedDbContextProvider();
+
+			//Register nonempty userList
+			dataProvider.SetUpDbSet(data);
+
 			_dbContext = dataProvider.MockedDbContext.Object;
 
 			_userService = new UserService(_dbContext);
+		}
+		
+		[Test]
+		public void AssertUserDbSetIsNotNullAndNotEmpty()
+		{
+			var list = _dbContext.Users.ToList();
+
+			Assert.That(list, Is.Not.Null);
+			Assert.That(list.Count, Is.Not.EqualTo(0));
 		}
 
 		[Test]
 		public void GetUserByIdTestExists()
 		{
-			SingleUserViewModel foundUser = _userService.GetUserById(65);
+			var foundUser = _userService.GetUserById(65);
 
-			Assert.That(foundUser.Id, Is.EqualTo(65));
+			Assert.That(foundUser, Is.Not.Null);
+			/*Assert.That(foundUser.Id, Is.EqualTo(65));
 			Assert.That(foundUser.UserName, Is.EqualTo("Test"));
-			Assert.That(foundUser.NumberOfPosts, Is.EqualTo(0));
+			Assert.That(foundUser.NumberOfPosts, Is.EqualTo(0));*/
 		}
 
 		[Test]
 		public void GetUserByIdTestNull()
 		{
+			var notFoundUser = _userService.GetUserById(2345345);
+
+			Assert.That(notFoundUser, Is.Null);
 		}
+
+
+		#region NonTestMembers
+
+		private void InitializeContextWithData(IFlowPostDataContext mockedContext)
+		{
+			
+		}
+
+		#endregion
 	}
 }

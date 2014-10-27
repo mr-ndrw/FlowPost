@@ -55,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Output\CategoryGroupWithChildren.cs" />
+    <Compile Include="Output\ListCategoryGroupWithChildren.cs" />
+    <Compile Include="Output\CategoryViewModel.cs" />
     <Compile Include="Output\SingleUserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\SharedAssemblyInfo.cs" />

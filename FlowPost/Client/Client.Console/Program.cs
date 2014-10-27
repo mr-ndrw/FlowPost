@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using en.AndrewTorski.FlowPost.Logic.Entities;
@@ -56,7 +57,7 @@ namespace en.AndrewTorski.FlowPost.Client.Console
 
 				System.Console.WriteLine("3: {0}", cat.ModeratingUsers.SingleOrDefault().UserName);
 
-				//db.SaveChanges();
+				db.SaveChanges();
 
 				System.Console.ReadKey();
 			}

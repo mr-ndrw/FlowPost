@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using en.AndrewTorski.FlowPost.Logic.Entities;
 
 namespace en.AndrewTorski.FlowPost.Persistance.Data
@@ -103,5 +104,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// </summary>
 		/// <returns></returns>
 		int SaveChanges();
+
+
 	}
 }

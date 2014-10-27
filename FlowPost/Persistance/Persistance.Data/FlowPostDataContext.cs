@@ -13,7 +13,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 	{
 
 		/// <summary>
-		///		Initializes a new instance of the <see cref="FlowPostDataContext"/> class.
+		///		Initializes a new instance of the <see cref="FlowPostDataContext"/> class with a default connection.
 		/// </summary>
 		/// <remarks>
 		///		Connects to the Default Connection.
@@ -40,13 +40,15 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 
 		#region Properties
 
+		//Virtual properties so that is is possible to mock them.
+
 		/// <summary>
 		///		Gets or sets the posts.
 		/// </summary>
 		/// <value>
 		///		The posts.
 		/// </value>
-		public DbSet<Post> Posts { get; set; }
+		public virtual DbSet<Post> Posts { get; set; }
 
 		/// <summary>
 		///		Gets or sets the topics.
@@ -54,7 +56,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The topics.
 		/// </value>
-		public DbSet<Topic> Topics { get; set; }
+		public virtual DbSet<Topic> Topics { get; set; }
 
 		/// <summary>
 		///		Gets or sets the bans.
@@ -62,7 +64,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The bans.
 		/// </value>
-		public DbSet<Ban> Bans { get; set; }
+		public virtual DbSet<Ban> Bans { get; set; }
 
 		/// <summary>
 		///		Gets or sets the post edits.
@@ -70,7 +72,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The post edits.
 		/// </value>
-		public DbSet<PostEdit> PostEdits { get; set; }
+		public virtual DbSet<PostEdit> PostEdits { get; set; }
 
 		/// <summary>
 		///		Gets or sets the messages.
@@ -78,7 +80,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The messages.
 		/// </value>
-		public DbSet<Message> Messages { get; set; }
+		public virtual DbSet<Message> Messages { get; set; }
 
 		/// <summary>
 		///		Gets or sets the user reports.
@@ -86,7 +88,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The user reports.
 		/// </value>
-		public DbSet<UserReport> UserReports { get; set; }
+		public virtual DbSet<UserReport> UserReports { get; set; }
 
 		/// <summary>
 		///		Gets or sets the post reports.
@@ -94,7 +96,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The post reports.
 		/// </value>
-		public DbSet<PostReport> PostReports { get; set; }
+		public virtual DbSet<PostReport> PostReports { get; set; }
 
 		/// <summary>
 		///		Gets or sets the categories.
@@ -102,7 +104,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The categories.
 		/// </value>
-		public DbSet<Category> Categories { get; set; }
+		public virtual DbSet<Category> Categories { get; set; }
 
 		/// <summary>
 		///		Gets or sets the category groups.
@@ -110,7 +112,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The category groups.
 		/// </value>
-		public DbSet<CategoryGroup> CategoryGroups { get; set; }
+		public virtual DbSet<CategoryGroup> CategoryGroups { get; set; }
 
 
 		/// <summary>
@@ -119,7 +121,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 		/// <value>
 		///		The groups.
 		/// </value>
-		public DbSet<Group> Groups { get; set; } 
+		public virtual DbSet<Group> Groups { get; set; } 
 
 		#endregion
 

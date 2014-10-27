@@ -5,32 +5,53 @@ using Moq;
 
 namespace en.AndrewTorski.FlowPost.Test.Data
 {
-
 	/// <summary>
-	///		Provides a clean way to get a Typed DbSet configuration to use with Moq.
+	///     Provides a clean way to get a Typed DbSet configuration to use with Moq.
 	/// </summary>
-	/// <typeparam name="TEntity">The type of the entity.</typeparam>
-	public static class MockedDbSetProvider<TEntity> 
-		where TEntity : class
+	public static class MockedDbSetProvider
 	{
-
 		/// <summary>
-		///		Gets a configured Typed DbSet.
+		///     Gets a empty, configured Typed DbSet.
 		/// </summary>
 		/// <returns>
-		///		Configured Typed DbSet
+		///     Configured Typed DbSet
 		/// </returns>
-		public static Mock<DbSet<TEntity>> GetDbSet()
+		public static Mock<DbSet<TEntity>> GetDbSet<TEntity>() where TEntity : class
 		{
-			var mockedUserSet = new Mock<DbSet<TEntity>>();
-			var userData = new List<TEntity>().AsQueryable();
+			var mockedDbSet = new Mock<DbSet<TEntity>>();
+			var data = new List<TEntity>().AsQueryable();
 
-			mockedUserSet.As<IQueryable<TEntity>>().Setup(m => m.Provider).Returns(userData.Provider);
-			mockedUserSet.As<IQueryable<TEntity>>().Setup(m => m.Expression).Returns(userData.Expression);
-			mockedUserSet.As<IQueryable<TEntity>>().Setup(m => m.ElementType).Returns(userData.ElementType);
-			mockedUserSet.As<IQueryable<TEntity>>().Setup(m => m.GetEnumerator()).Returns(userData.GetEnumerator());
+			mockedDbSet.As<IQueryable<TEntity>>().Setup(m => m.Provider).Returns(data.Provider);
+			mockedDbSet.As<IQueryable<TEntity>>().Setup(m => m.Expression).Returns(data.Expression);
+			mockedDbSet.As<IQueryable<TEntity>>().Setup(m => m.ElementType).Returns(data.ElementType);
+			mockedDbSet.As<IQueryable<TEntity>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
 
-			return mockedUserSet;
+			return mockedDbSet;
+		}
+
+
+		/// <summary>
+		///		Returns a typed, nonempty DbSet.
+		/// </summary>
+		/// <typeparam name="TEntity"></typeparam>
+		/// <param name="dataSet">
+		///		Data for DbSet to include.
+		/// </param>
+		/// <returns>
+		///		Typed, nonempty DbSet.
+		///	</returns>
+		public static Mock<DbSet<TEntity>> GetDbSet<TEntity>(List<TEntity> dataSet) where TEntity : class
+
+		{
+			var mockedDbSet = new Mock<DbSet<TEntity>>();
+			var data = dataSet.AsQueryable();
+
+			mockedDbSet.As<IQueryable<TEntity>>().Setup(m => m.Provider).Returns(data.Provider);
+			mockedDbSet.As<IQueryable<TEntity>>().Setup(m => m.Expression).Returns(data.Expression);
+			mockedDbSet.As<IQueryable<TEntity>>().Setup(m => m.ElementType).Returns(data.ElementType);
+			mockedDbSet.As<IQueryable<TEntity>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
+
+			return mockedDbSet;
 		}
 	}
 }

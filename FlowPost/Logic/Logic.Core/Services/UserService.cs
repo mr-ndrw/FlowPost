@@ -42,7 +42,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Core.Services
 			{
 				return null;
 			}
-			
+
 			/*	Initialize the result model's properties with provided constructor which takes a User instance 
 				Note: Posts are ordered descendingly inside the constructor.	*/
 			var resultModel = new SingleUserViewModel(userToFind);
