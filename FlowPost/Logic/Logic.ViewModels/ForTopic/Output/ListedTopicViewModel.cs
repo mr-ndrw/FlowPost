@@ -1,4 +1,5 @@
 ﻿using System;
+using en.AndrewTorski.FlowPost.Logic.Entities;
 using en.AndrewTorski.FlowPost.Logic.ViewModels.ForPost.Output;
 using en.AndrewTorski.FlowPost.Logic.ViewModels.ForUser.Output;
 
@@ -53,11 +54,6 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForTopic.Output
 		public int NumberOfReplies { get; set; }
 
 		/// <summary>
-		///		Datetime of the last message posted to this Topic.
-		/// </summary>
-		public DateTime LastPostDateTime { get; set; }
-
-		/// <summary>
 		///		Simple data about the last message posted.
 		/// </summary>
 		public SimplePostViewModel LastPost { get; set; }
@@ -66,5 +62,25 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForTopic.Output
 		///		Basic data about the user who has posted last message to this topic.
 		/// </summary>
 		public SimpleUserViewModel LastPoster { get; set; }
+
+		/// <summary>
+		///		Initializes the object with data from an object of class Topic.
+		/// </summary>
+		/// <param name="topic">
+		///		Topic object for which the ViewModel is obtained.
+		/// </param>
+		public ListedTopicViewModel(Topic topic)
+		{
+			Id = topic.Id;
+			Subject = topic.Subject;
+			IsHidden = topic.IsHidden;
+			IsClosed = topic.IsClosed;
+			IsSticky = topic.IsSticky;
+			IsExtraordinary = topic.IsExtraordinary;
+			NumberOfReplies = topic.NumberOfReplies;
+			NumberOfViews = topic.NumberOfViews;
+			LastPost = new SimplePostViewModel(topic.LastPost);
+			LastPoster = new SimpleUserViewModel(topic.LastPoster);
+		}
 	}
 }

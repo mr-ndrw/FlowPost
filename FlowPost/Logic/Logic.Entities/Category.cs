@@ -51,6 +51,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 		/// </summary>
 		public CategoryGroup CategoryGroup { get; set; }
 
+		//Consider: change the to ChildrenCategories?
 		/// <summary>
 		///     Collection of children Categories.
 		/// </summary>

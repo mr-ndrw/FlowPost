@@ -23,6 +23,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 
 		#region NavigationProperties
 
+		//Consider:	Changing the name to ChildrenCategories?
 		/// <summary>
 		///     Collection of Categories which belong to this group.
 		/// </summary>

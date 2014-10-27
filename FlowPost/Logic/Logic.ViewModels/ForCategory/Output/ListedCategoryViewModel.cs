@@ -13,9 +13,11 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output
 	public class ListedCategoryViewModel
 	{
 		/// <summary>
-		///		
+		///		Initializes the object with data from category.
 		/// </summary>
-		/// <param name="category"></param>
+		/// <param name="category">
+		///		Category for which a ViewModel is obtained.
+		/// </param>
 		public ListedCategoryViewModel(Category category)
 		{
 			Id = category.Id;
