@@ -57,20 +57,17 @@ namespace en.AndrewTorski.FlowPost.Test.Logic.Core
 			var dataProvider = new MockedDbContextProvider();
 
 			//Register nonempty userList
-			dataProvider.SetUpDbSet(data);
+			dataProvider.SetUpUserDbSet(data);
 
 			_dbContext = dataProvider.MockedDbContext.Object;
 
 			_userService = new UserService(_dbContext);
 		}
-		
-		[Test]
-		public void AssertUserDbSetIsNotNullAndNotEmpty()
-		{
-			var list = _dbContext.Users.ToList();
 
-			Assert.That(list, Is.Not.Null);
-			Assert.That(list.Count, Is.Not.EqualTo(0));
+		[Test]
+		public void AssertUserDbSetIsNull()
+		{
+			Assert.That(_dbContext.Users, Is.Null);
 		}
 
 		[Test]
