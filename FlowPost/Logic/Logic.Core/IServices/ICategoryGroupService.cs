@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
-using en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output;
+using en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategoryGroup.Output;
 
 namespace en.AndrewTorski.FlowPost.Logic.Core.IServices
 {
+	/// <summary>
+	///		Defines a contract for operations which manipulate objects of class CategoryGroup.
+	/// </summary>
 	public interface ICategoryGroupService
 	{
 		/// <summary>
@@ -14,7 +17,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Core.IServices
 		/// <remarks>
 		///		Returns empty list(count == 0) if not category group was found.
 		/// </remarks>
-		List<CategoryViewModel> GetCategoryGroups();
+		List<CategoryGroupViewModel> GetCategoryGroups();
 
 	}
 }

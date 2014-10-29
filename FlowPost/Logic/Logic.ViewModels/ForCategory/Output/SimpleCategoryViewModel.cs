@@ -1,4 +1,6 @@
-﻿namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output
+﻿using en.AndrewTorski.FlowPost.Logic.Entities;
+
+namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output
 {
 	/// <summary>
 	///		Contains very simple data about a category.
@@ -8,6 +10,19 @@
 	/// </remarks>
 	public class SimpleCategoryViewModel
 	{
+		/// <summary>
+		///		Initializes an object with data from <see cref="Category"/> object.
+		/// </summary>
+		/// <param name="category">
+		///		Category for which we obtain a ViewModel.
+		/// </param>
+		public SimpleCategoryViewModel(Category category)
+		{
+			Id = category.Id;
+			Name = category.Name;
+			//	Recursion imminent
+			ParentCategory = new SimpleCategoryViewModel(category.ParentCategory);
+		}
 		/// <summary>
 		///     Category's unique identifier which serves as the Key.
 		/// </summary>
@@ -21,7 +36,7 @@
 		/// <summary>
 		///		Parent category to which this category belongs.
 		/// </summary>
-		public SimpleCategoryViewModel CategoryViewModel { get; set; }
+		public SimpleCategoryViewModel ParentCategory { get; set; }
 
 	}
 }

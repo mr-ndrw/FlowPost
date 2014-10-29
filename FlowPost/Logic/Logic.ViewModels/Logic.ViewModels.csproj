@@ -60,6 +60,8 @@
     <Compile Include="ForCategoryGroup\Output\CategoryGroupViewModel.cs" />
     <Compile Include="ForCategory\Output\CategoryViewModel.cs" />
     <Compile Include="ForCategory\Output\ListedCategoryViewModel.cs" />
+    <Compile Include="ForMessage\Output\ListedMessageViewModel.cs" />
+    <Compile Include="ForMessage\Output\MessageViewModel.cs" />
     <Compile Include="ForTopic\Output\ListedTopicViewModel.cs" />
     <Compile Include="ForPost\Output\PostViewModel.cs" />
     <Compile Include="ForCategory\Output\SimpleCategoryViewModel.cs" />
@@ -73,6 +75,7 @@
   <ItemGroup>
     <Folder Include="ForCategoryGroup\Input\" />
     <Folder Include="ForCategory\Input\" />
+    <Folder Include="ForMessage\Input\" />
     <Folder Include="ForPost\Input\" />
     <Folder Include="ForTopic\Input\" />
     <Folder Include="ForUser\Input\" />

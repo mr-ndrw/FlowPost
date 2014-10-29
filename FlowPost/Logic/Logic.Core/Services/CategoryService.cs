@@ -1,4 +1,5 @@
-﻿using en.AndrewTorski.FlowPost.Logic.Core.IServices;
+﻿using System.Linq;
+using en.AndrewTorski.FlowPost.Logic.Core.IServices;
 using en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output;
 using en.AndrewTorski.FlowPost.Persistance.Data;
 
@@ -39,7 +40,19 @@ namespace en.AndrewTorski.FlowPost.Logic.Core.Services
 		/// </remarks>
 		public CategoryViewModel GetCategoryById(int id)
 		{
-			throw new System.NotImplementedException();
+			var categoryToFind = _dbContext.Categories
+									.Include("Topics")
+									.Include("ChildrenCategories")
+									.SingleOrDefault(category => category.Id == id);
+
+			if (categoryToFind == null)
+			{
+				return null;
+			}
+
+			var result = new CategoryViewModel(categoryToFind);
+
+			return result;
 		}
 	}
 }
