@@ -16,6 +16,7 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForCategory.Output
 		/// <param name="category">
 		///		Category for which we obtain a ViewModel.
 		/// </param>
+		// ReSharper disable once FunctionRecursiveOnAllPaths
 		public SimpleCategoryViewModel(Category category)
 		{
 			Id = category.Id;

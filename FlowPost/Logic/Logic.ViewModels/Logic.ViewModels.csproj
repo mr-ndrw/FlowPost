@@ -60,6 +60,7 @@
     <Compile Include="ForCategoryGroup\Output\CategoryGroupViewModel.cs" />
     <Compile Include="ForCategory\Output\CategoryViewModel.cs" />
     <Compile Include="ForCategory\Output\ListedCategoryViewModel.cs" />
+    <Compile Include="ForMessage\MessageListingContext.cs" />
     <Compile Include="ForMessage\Output\ListedMessageViewModel.cs" />
     <Compile Include="ForMessage\Output\MessageViewModel.cs" />
     <Compile Include="ForTopic\Output\ListedTopicViewModel.cs" />

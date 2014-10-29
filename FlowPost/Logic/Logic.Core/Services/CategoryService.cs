@@ -13,7 +13,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Core.Services
 		/// <summary>
 		///		Flow post data context.
 		/// </summary>
-		private IFlowPostDataContext _dbContext;
+		private readonly IFlowPostDataContext _dbContext;
 
 		/// <summary>
 		///		Initializes CategoryService object with dbContext.
