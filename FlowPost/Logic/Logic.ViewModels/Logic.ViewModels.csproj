@@ -67,6 +67,8 @@
     <Compile Include="ForPost\Output\PostViewModel.cs" />
     <Compile Include="ForCategory\Output\SimpleCategoryViewModel.cs" />
     <Compile Include="ForPost\Output\SimplePostViewModel.cs" />
+    <Compile Include="ForUser\Input\LogInViewModel.cs" />
+    <Compile Include="ForUser\Input\RegisterViewModel.cs" />
     <Compile Include="ForUser\Output\SimpleUserViewModel.cs" />
     <Compile Include="ForUser\Output\SingleUserViewModel.cs" />
     <Compile Include="ForTopic\Output\TopicViewModel.cs" />
@@ -79,7 +81,6 @@
     <Folder Include="ForMessage\Input\" />
     <Folder Include="ForPost\Input\" />
     <Folder Include="ForTopic\Input\" />
-    <Folder Include="ForUser\Input\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Logic.Entities\Logic.Entities.csproj">
