@@ -187,11 +187,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Logic\Logic.Core\Logic.Core.csproj">
+    <ProjectReference Include="..\..\Logic\Logic.Core\Logic.Core.csproj">
       <Project>{0c970315-239c-4cf3-94b8-a56d5ff43354}</Project>
       <Name>Logic.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Logic\Logic.ViewModels\Logic.ViewModels.csproj">
+    <ProjectReference Include="..\..\Logic\Logic.ViewModels\Logic.ViewModels.csproj">
       <Project>{3da1a9f3-50f5-40bd-8161-7deb437d5bc7}</Project>
       <Name>Logic.ViewModels</Name>
     </ProjectReference>
