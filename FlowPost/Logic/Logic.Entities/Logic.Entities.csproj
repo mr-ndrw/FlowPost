@@ -62,7 +62,7 @@
     <Compile Include="Ban.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="CategoryGroup.cs" />
-    <Compile Include="Claim.cs" />
+    <Compile Include="UserClaim.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Message.cs" />

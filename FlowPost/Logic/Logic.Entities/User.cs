@@ -10,7 +10,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Entities
 	/// <remarks>
 	///     No Entity Framework specific annotations were used.
 	/// </remarks>
-	public class User : IdentityUser<int, Login, UserRole, Claim>
+	public class User : IdentityUser<int, Login, UserRole, UserClaim>
 	{
 		#region Properties
 

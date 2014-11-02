@@ -2,7 +2,7 @@
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 
-namespace en.AndrewTorski.FlowPost.Client.WebApplication.App_Start
+namespace en.AndrewTorski.FlowPost.Client.Web
 {
 	public class Startup
 	{
@@ -11,7 +11,7 @@ namespace en.AndrewTorski.FlowPost.Client.WebApplication.App_Start
 			app.UseCookieAuthentication(new CookieAuthenticationOptions
 			{
 				AuthenticationType = "ApplicationCookie",
-				LoginPath = new PathString("/auth/login")
+				LoginPath = new PathString("/authentication/login")
 			});
 		}
 	}

@@ -2,7 +2,7 @@
 
 namespace en.AndrewTorski.FlowPost.Logic.Entities
 {
-	public class Claim : IdentityUserClaim<int>
+	public class UserClaim : IdentityUserClaim<int>
 	{
 	}
 }

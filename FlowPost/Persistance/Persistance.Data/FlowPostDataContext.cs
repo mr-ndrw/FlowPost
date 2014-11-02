@@ -9,7 +9,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Data
 	/// <summary>
 	///		Persistance layer class giving enabling access of upper layers(business logic layer) to Data Access Layer.
 	/// </summary>
-	public class FlowPostDataContext : IdentityDbContext<User, Role, int, Login, UserRole, Claim>, IFlowPostDataContext
+	public class FlowPostDataContext : IdentityDbContext<User, Role, int, Login, UserRole, UserClaim>, IFlowPostDataContext
 	{
 
 		/// <summary>
