@@ -10,7 +10,7 @@ using Microsoft.Owin.Security;
 
 namespace en.AndrewTorski.FlowPost.Logic.Core.Services
 {
-	public class AuthorizationService : IAuthorizationService
+	public class AccountService : IAccountService
 	{
 		//	READTHIS READTHIS READTHIS
 		//	UserStore constructor expects a DbContext, which is why a concrecte class is referenced.
@@ -25,7 +25,7 @@ namespace en.AndrewTorski.FlowPost.Logic.Core.Services
 		///		Constructor initializing 
 		/// </summary>
 		/// <param name="dbContext"></param>
-		public AuthorizationService(FlowPostDataContext dbContext)
+		public AccountService(FlowPostDataContext dbContext)
 		{
 			_userManager = new UserManager<User, int>(new UserStore<User, Role, int, Login, UserRole, UserClaim>(dbContext));
 		}

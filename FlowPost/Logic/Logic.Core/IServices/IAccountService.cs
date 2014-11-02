@@ -7,7 +7,7 @@ using Microsoft.Owin.Security;
 
 namespace en.AndrewTorski.FlowPost.Logic.Core.IServices
 {
-	public interface IAuthorizationService
+	public interface IAccountService
 	{
 		/// <summary>
 		///		Register the contextualized Cookie Authentication Manager.
