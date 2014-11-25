@@ -9,6 +9,10 @@ namespace en.AndrewTorski.FlowPost.Logic.ViewModels.ForPost.Output
 	/// </summary>
 	public class PostViewModel
 	{
+		public PostViewModel()
+		{
+			
+		}
 		/// <summary>
 		///		Initializes an object with data from Post object.
 		/// </summary>

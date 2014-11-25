@@ -10,8 +10,7 @@ namespace en.AndrewTorski.FlowPost.Persistance.Configurations
 	{
 		public TopicConfiguration()
 		{
-            /*  Inheritance configuration:
-             */
+            //  Inheritance configuration:
 
 		    ToTable("Topics");
 
